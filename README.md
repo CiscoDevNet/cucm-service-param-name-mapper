@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sample script that scrapes Cisco Unified Communications Manager admin UI pages to map service parameter UI labels with their database IDs.
+Sample script that scrapes Cisco Unified Communications Manager admin UI pages to map service parameter UI labels with their programmatic IDs.
 
 Results are output to JSON and markdown formatted files.  Example JSON output files for CUCM versions [12.5(1)SU6](output_v12.51SU6.json)/ [14](output_v14.json) / [14SU3](output_v14SU3.json) are included.
 
@@ -19,13 +19,16 @@ Uses:
 * Python 3.11.4
 * CUCM 12.5(1)SU6 / 14 / 14SU3
 
+DevNet sandboxes with CUCM instances are available for testing, e.g. **Collaboration / Collaboration 14.0**: [DevNet Sandboxes](https://developer.cisco.com/site/sandbox/)
+
 ## Pre-requisites
 
 * Python 3.8+
+* CUCM admin UI user credentials, with AXL read permissions
 
 ## Getting started
 
-* Create/activate a Python virtual environment named `venv`:
+* Create/activate a Python virtual environment, e.g.:
 
   ```bash
   python3 -m venv venv
@@ -38,13 +41,16 @@ Uses:
   pip install -r requirements.txt
   ```
 
-* Rename `.env_example` to `.env`, and edit it to specify your CUCM host address and Admin/AXL.
+* Rename `.env_example` to `.env`, and edit to specify your CUCM host address and admin/AXL credentials.
+
 
   > **Notes:**
     > * CUCM hostname is case sensitive - as appears in CUCM admin **List / Server**.
     > * The CUCM admin user must have AXL read permission.
 
-* To run the sample, use the following command, e.g.:
+  Be sure to save the file!
+  
+* To run the sample, use the following command:
 
   ```bash
   python map_param_names.py
