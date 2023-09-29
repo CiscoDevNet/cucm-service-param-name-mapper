@@ -1,14 +1,15 @@
 # Service Parameter Label to ID Mapping
 
-**Hostname:** SJDS-UCM1251
+**Hostname:** cucm14
 
-**AXL Version:** 12.5
+**AXL Version:** 14.0
 
 | Service                                                      | Parameter ID                                       | Label                                                                             |
 | ------------------------------------------------------------ | -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Enterprise Wide                                              |                                                    |                                                                                   |
 |                                                              | ClusterID                                          | Cluster ID                                                                        |
 |                                                              | MaxNumberDeviceLevelTrace                          | Max Number of Device Level Trace                                                  |
+|                                                              | EnableTraceCompression                             | Trace Compression                                                                 |
 |                                                              | DSCPForSCCPPhoneServices                           | DSCP for Phone-based Services                                                     |
 |                                                              | DSCPForSCCPPhoneConfig                             | DSCP for Phone Configuration                                                      |
 |                                                              | DSCPForCm2Dvce                                     | DSCP for Cisco CallManager to Device Interface                                    |
@@ -26,6 +27,7 @@
 |                                                              | URILookupPolicy                                    | URI Lookup Policy                                                                 |
 |                                                              | HeadsetAssociation                                 | Headset Association                                                               |
 |                                                              | FeaturePreviewEnablement                           | Feature Preview Enablement                                                        |
+|                                                              | HostnameVerificationPolicy                         | Hostname (FQDN) Verification Policy                                               |
 |                                                              | CCMAdminMaxItemsInList                             | Max List Box Items                                                                |
 |                                                              | CCMAdminMaxItemsInLookup                           | Max Lookup Items                                                                  |
 |                                                              | CCMAdminEnableDependencyRecords                    | Enable Dependency Records                                                         |
@@ -78,6 +80,7 @@
 |                                                              | HTTPSCipherSelection                               | HTTPS Ciphers                                                                     |
 |                                                              | TrustedServers                                     | Trusted List of Hosts in HTTP Referer/Host Header                                 |
 |                                                              | TerminateUserSession                               | Terminate User Sessions on Privilege or Credential Change                         |
+|                                                              | ResetPhonesOnCertChange                            | Phone Interaction on Certificate Update                                           |
 |                                                              | CertificateValidityCheck                           | Certificate Validity Check                                                        |
 |                                                              | CertificateValidityCheckFrequency                  | Validity Check Frequency (hours)                                                  |
 |                                                              | RollBackToPreGrayback                              | Prepare Cluster for Rollback to pre 8.0                                           |
@@ -103,6 +106,7 @@
 |                                                              | AllowedPerfmonQueriesPerMinute                     | Allowed Performance Queries Per Minute                                            |
 |                                                              | AllowedRisQueriesPerMinute                         | Allowed Device Queries Per Minute                                                 |
 |                                                              | PerfmonQueueLimit                                  | Performance Queue Limit                                                           |
+|                                                              | MaximumPerfmonCountersPerSession                   | Maximum Performance Counters Per Session                                          |
 |                                                              | AllowedCdrGetFileQueriesPerMinute                  | Allowed CDRonDemand get_file Queries Per Minute                                   |
 |                                                              | AllowedCdrGetFileListQueriesPerMinute              | Allowed CDRonDemand get_file_list Queries Per Minute                              |
 |                                                              | FileCloseThreadFlag                                | File Close Thread Flag                                                            |
@@ -138,6 +142,7 @@
 |                                                              | GRTSocketConnectTimeout                            | Report Socket Connection Timeout                                                  |
 |                                                              | GRTSocketReadTimeout                               | Report Socket Read Timeout                                                        |
 |                                                              | isLogicalPartitioningEnabled                       | Enable Logical Partitioning                                                       |
+|                                                              | isCustomLogicalPartitioningApplied                 | Custom Logical Partitioning Applied                                               |
 |                                                              | defaultGeolocation                                 | Default Geolocation                                                               |
 |                                                              | logicalPartitioningDefaultPolicy                   | Logical Partitioning Default Policy                                               |
 |                                                              | logicalPartitioningDefaultFilter                   | Logical Partitioning Default Filter                                               |
@@ -154,6 +159,7 @@
 |                                                              | SSOLoginBehaviorForIos                             | SSO Login Behavior for iOS                                                        |
 |                                                              | oAuthWithRefreshLoginFlow                          | OAuth with Refresh Login Flow                                                     |
 |                                                              | UseSSOforRTMT                                      | Use SSO for RTMT                                                                  |
+|                                                              | OAuthAccessTokenForDevices                         | OAuth Access Token for Devices                                                    |
 |                                                              | ProvisioningReplacementPhoneforEndUser             | When Provisioning a Replacement Phone for an End User                             |
 |                                                              | SecurityProfileforMigratedPhone                    | Security Profile for Migrated Phone                                               |
 |                                                              | PhoneMigrationUserIdentificationPrompt             | Phone Migration User Identification Prompt                                        |
@@ -172,12 +178,40 @@
 |                                                              | DefaultBPSThrottlingLimit                          | Default Throttling Limit                                                          |
 |                                                              | ImportUsersContactRate                             | The amount of users contact to import per second                                  |
 | Cisco CTIManager (Active)                                    |                                                    |                                                                                   |
+|                                                              | CTILoginRequestTimeout                             | CTI Login Request Timer                                                           |
+|                                                              | CTIProgLogsNumFiles                                | CTI ProgLogs Max Number of Files                                                  |
+|                                                              | CTIRequestTimeout                                  | CTI Request Timer                                                                 |
+|                                                              | MaxCTIConnections                                  | Maximum CTI Connections                                                           |
+|                                                              | MaxSimultaneousCTILogins                           | Maximum Simultaneous CTI Connections                                              |
+|                                                              | PluginLocationURL                                  | Plugin Location URL                                                               |
+|                                                              | SdlTraceDataFlags                                  | SDL Trace Data Flags                                                              |
+|                                                              | SdlTraceDataSize                                   | SDL Trace Data Size                                                               |
 |                                                              | SdlTraceFlag                                       | SDL Trace Flag                                                                    |
 |                                                              | SdlTraceTypeFlags                                  | SDL Trace Type Flags                                                              |
+|                                                              | ApplicationHeartbeatMaxInterval                    | Application Heartbeat Maximum Interval                                            |
+|                                                              | ApplicationHeartbeatMinInterval                    | Application Heartbeat Minimum Interval                                            |
+|                                                              | HuntCallClearDelayTimer                            | Hunt Call Clear Delay Timer                                                       |
 |                                                              | MaxSSOTokenSize                                    | Maximum SSO Token Size For CTI User Authentication                                |
+|                                                              | MaxDevicesPerProvider                              | Maximum Devices Per Provider                                                      |
+|                                                              | MaxDevicesPerNode                                  | Maximum Devices Per Node                                                          |
 |                                                              | RequirePublicKeyEncryption                         | Require Public Key Encryption                                                     |
 |                                                              | DefaultIPAddrMode                                  | IP Addressing Mode for devices                                                    |
-| Cisco CTL Provider (Active)                                  |                                                    |                                                                                   |
+|                                                              | CTIDatabaseQueriesPerIteration                     | CTI Database Device Queries Per Iteration                                         |
+|                                                              | CTIDatabaseQueryInterval                           | CTI Database Device Query Interval                                                |
+|                                                              | CTIDbDnQueryInterval                               | CTI Database Directory Number Query Interval                                      |
+|                                                              | CTIDeviceRehomingInterval                          | CTI Device Rehoming Interval                                                      |
+|                                                              | CTIDevicesToRehomePerIteration                     | CTI Devices To Rehome Per Iteration                                               |
+|                                                              | CTIRegUnRegEventsPerIteration                      | CTI Register/Unregister Events Per Iteration                                      |
+|                                                              | CTISendRegUnRegInterval                            | CTI Send Register/Unregister Event Interval                                       |
+|                                                              | CTIInstanceIdRetryCount                            | CTI InstanceId Retry Count                                                        |
+|                                                              | CTIInstanceIdRetryCounterCleanupDelay              | CTI InstanceId Retry Counter Cleanup Delay                                        |
+|                                                              | CtiDeviceOpenRetryDelay                            | CTI Device Open Retry Delay                                                       |
+|                                                              | CtiDeviceOpenRetryCount                            | CTI Device Open Retry Count                                                       |
+|                                                              | DSCPForICCP                                        | DSCP for ICCP Protocol Links                                                      |
+|                                                              | DSCPForCTI2Apps                                    | DSCP IP CTIManager to Application                                                 |
+|                                                              | SdlListeningPort                                   | SDL Listening Port                                                                |
+|                                                              | SdlMaxUnHandledExceptions                          | Suppress Debug Info for Router Death                                              |
+| Cisco CTL Provider (Inactive)                                |                                                    |                                                                                   |
 | Cisco CallManager (Active)                                   |                                                    |                                                                                   |
 |                                                              | CodeYellowEntryLatency                             | Code Yellow Entry Latency                                                         |
 |                                                              | CodeYellowExitLatencyCalculation                   | Code Yellow Exit Latency Calculation                                              |
@@ -185,6 +219,11 @@
 |                                                              | MaxEventsAllowed                                   | Max Events Allowed                                                                |
 |                                                              | SystemThrottleSampleSize                           | System Throttle Sample Size                                                       |
 |                                                              | MemoryThrottlingEnabled                            | Enable Memory Throttling                                                          |
+|                                                              | MemoryThrottlingVirtualMemorySize                  | Memory Throttling Virtual Memory Size                                             |
+|                                                              | MemoryThrottlingFreeBlocks                         | Memory Throttling Free Blocks                                                     |
+|                                                              | MemoryThrottlingDuration                           | Memory Throttling Duration                                                        |
+|                                                              | MemoryThrottlingRecovery                           | Memory Throttling Recovery Duration                                               |
+|                                                              | CCTRegressionTestParam                             | CCT Regression Test Only                                                          |
 |                                                              | CdrEnabled                                         | CDR Enabled Flag                                                                  |
 |                                                              | CdrLogCallsWithZeroDurationFlag                    | CDR Log Calls with Zero Duration Flag                                             |
 |                                                              | DigitAnalysisComplexity                            | Digit Analysis Complexity                                                         |
@@ -198,6 +237,7 @@
 |                                                              | SdlTraceFlag                                       | SDL Trace Flag                                                                    |
 |                                                              | SdlTraceTypeFlags                                  | SDL TraceType Flags                                                               |
 |                                                              | CallDiagnosticsEnabled                             | Call Diagnostics Enabled                                                          |
+|                                                              | DisplayFACInCDR                                    | Display FAC in CDR                                                                |
 |                                                              | ShowMemberDNinfinalCalledPartyNumber               | Show Line Group Member DN in finalCalledPartyNumber CDR Field                     |
 |                                                              | ShowMemberDNNonMaskinfinalCalledPartyNumber        | Show Line Group Member Non Masked DN in finalCalledPartyNumber CDR Field          |
 |                                                              | CTINewCallAcceptTimeout                            | CTI New Call Accept Timer                                                         |
@@ -206,6 +246,8 @@
 |                                                              | CTIAwaitFurtherDigits                              | CTI Await Further Digits                                                          |
 |                                                              | CTIWildCardDNAsCalledParty                         | CTI Use Wildcard Pattern as calledPartyDN                                         |
 |                                                              | CTISendFakeRingbackOn183SDP                        | CTI Report Ringback on SIP 183 with SDP                                           |
+|                                                              | disableNonRegisteredSCCPKeepAlives                 | Disable Nonregistered SCCP KeepAlives                                             |
+|                                                              | CallForwardNotificationAllLines                    | Call Forward Notification All Lines                                               |
 |                                                              | RetainMediaOnDisconnectWithPIForActiveCall         | Retain Media on Disconnect with PI for Active Call                                |
 |                                                              | Station2ndKeepaliveInterval                        | Station and Backup Server KeepAlive Interval                                      |
 |                                                              | StationKeepaliveInterval                           | Station KeepAlive Interval                                                        |
@@ -227,15 +269,20 @@
 |                                                              | TimerT321_msec                                     | T321 Timer                                                                        |
 |                                                              | TimerT322_msec                                     | T322 Timer                                                                        |
 |                                                              | ToneOnHoldTime                                     | Tone on Hold Timer                                                                |
+|                                                              | UnknownCallerId                                    | Unknown Caller ID                                                                 |
 |                                                              | UnknownCallerIdFlag                                | Unknown Caller ID Flag                                                            |
+|                                                              | UnknownCallerIdText                                | Unknown Caller ID Text                                                            |
 |                                                              | CallClassification                                 | Call Classification                                                               |
 |                                                              | AlwaysDisplayOrignalDialedNumber                   | Always Display Original Dialed Number                                             |
 |                                                              | NameDisplayForOriginalDialedNumberWhenTranslated   | Name Display for Original Dialed Number When Translated                           |
 |                                                              | AlwaysUsePisWithOriginalDialedNumber               | Always Use PIs With Original Dialed Number                                        |
+|                                                              | OutOfBandwidthCauseValue                           | Out of Bandwidth Cause Code Substitution                                          |
+|                                                              | StripPlusForOutgoingCallsThroughGateway            | Strip + on Outbound Calls                                                         |
 |                                                              | FailCallIfTRPAllocationFails                       | Fail Call If Trusted Relay Point Allocation Fails                                 |
 |                                                              | AllowPartyIDDisplayIfPIisNA                        | Display Calling/Called ID When PI is Not Available                                |
 |                                                              | TransitCounterEnabledForQSIGTrunks                 | Enable Transit Counter Processing on QSIG Trunks                                  |
 |                                                              | EgressFacilityIECount                              | Egress FacilityIE Count                                                           |
+|                                                              | EnableDeviceMobilityforTrunks                      | Enable Device Mobility for Trunks                                                 |
 |                                                              | AlwayUsePrimeLine                                  | Always Use Prime Line                                                             |
 |                                                              | AlwayUsePrimeLineForVoiceMail                      | Always Use Prime Line for Voice Message                                           |
 |                                                              | BibEnable                                          | Builtin Bridge Enable                                                             |
@@ -269,13 +316,33 @@
 |                                                              | DisplayCtiRPInfoFlag                               | Display CTI Route Point Name or DN                                                |
 |                                                              | DisplayOriginalCgpnOnTransferFromVm                | Display Original Calling Number on Transfer from Cisco Unity                      |
 |                                                              | URIDialingDisplayPreference                        | URI Dialing Display Preference                                                    |
+|                                                              | PrefixApplyTo                                      | Incoming Calling Party Number Prefix - Apply To                                   |
+|                                                              | NationalPrefix                                     | Incoming Calling Party National Number Prefix - Phone                             |
+|                                                              | InternationalPrefix                                | Incoming Calling Party International Number Prefix - Phone                        |
+|                                                              | SubscriberPrefix                                   | Incoming Calling Party Subscriber Number Prefix - Phone                           |
+|                                                              | UnknownPrefix                                      | Incoming Calling Party Unknown Number Prefix - Phone                              |
+|                                                              | ApplyIncomingPrefixToCDRs                          | Add Incoming Number Prefix to CDR                                                 |
 |                                                              | InsertHyphensIn12DigitNumbers                      | Insert Hyphens in 12-Digit Numbers                                                |
 |                                                              | AllowCallWaitingDuringInProgressOutboundAnalogCall | Allow Call Waiting During an In-Progress Outbound Analog Call                     |
 |                                                              | TreatForeignDomainCallsAsURIinPhoneCallHistory     | Treat Foreign Domain Calls as URI in Phone Call History                           |
 |                                                              | DisplayExternalPresentationNameandNumber           | Display External Presentation Name and Number                                     |
+|                                                              | PauseInSpeedDialInterDigitInterval_msec            | Pause In Speed Dial InterDigit Interval                                           |
+|                                                              | DisplayHuntPilotNameOrDNWhenAlerting               | Display Hunt Pilot Name or DN for Hunt Group Calls When Alerting                  |
+|                                                              | ApplyTransformationsOnRemoteNumber                 | Apply Transformations On Remote Number                                            |
+|                                                              | Asn1RoseEncoding                                   | ASN.1 ROSE OID Encoding                                                           |
+|                                                              | QsigVariant                                        | QSIG Variant                                                                      |
+|                                                              | CallerID                                           | Caller ID                                                                         |
+|                                                              | CallingNameNotAvailableTimeout                     | Calling Name Not Available Timeout                                                |
 |                                                              | CgpnScreeningIndicator                             | Calling Party Number Screening Indicator                                          |
 |                                                              | EnableOutboundNetworkTrunkCgpnRestriction          | Enable Outbound NetworkTrunk CallingParty Restriction                             |
+|                                                              | ChangeBChannelMaintenanceStatus1                   | Change B-Channel Maintenance Status 1                                             |
+|                                                              | ChangeBChannelMaintenanceStatus2                   | Change B-Channel Maintenance Status 2                                             |
+|                                                              | ChangeBChannelMaintenanceStatus3                   | Change B-Channel Maintenance Status 3                                             |
+|                                                              | ChangeBChannelMaintenanceStatus4                   | Change B-Channel Maintenance Status 4                                             |
+|                                                              | ChangeBChannelMaintenanceStatus5                   | Change B-Channel Maintenance Status 5                                             |
+|                                                              | ClearCallsDueToIncompatibleCallState               | Clear Calls Due to Incompatible Call State                                        |
 |                                                              | ClearCallsWhenDatalinkGoesDown                     | Clear Calls Flag When Datalink Is Down                                            |
+|                                                              | DbMGCPDeviceTimeout                                | Database MGCP Device Request Timer                                                |
 |                                                              | DeviceStatusPollInterval_msec                      | Device Status Poll Interval                                                       |
 |                                                              | DisableAlertingPI                                  | Disable Alerting Progress Indicator                                               |
 |                                                              | DiscardNonInbandProgress                           | Discard Non Inband Progress in Overlap Sending                                    |
@@ -291,25 +358,40 @@
 |                                                              | MgcpFxsHangupTimeout                               | MGCP FXS On-Hook Pending Timer                                                    |
 |                                                              | MGCPRespTimeout                                    | MGCP Response Timer                                                               |
 |                                                              | MGCPTimeout                                        | MGCP Timer                                                                        |
+|                                                              | MGCPRetryTimeoutHandling                           | MGCP Retry Timeout Handling                                                       |
 |                                                              | NumberingPlanInfo                                  | Numbering Plan Info                                                               |
+|                                                              | OptimizeMediaConnectionTime                        | Optimize MediaConnection Time on Outbound Redirected Calls                        |
 |                                                              | OverlapReceivingForPriFlag                         | Overlap Receiving Flag for PRI                                                    |
 |                                                              | OutgoingMediaConnectTimeForPri                     | Outgoing Media Connect Time for PRI                                               |
 |                                                              | PortReleaseTimer                                   | Port Release Timer                                                                |
+|                                                              | PRI4ESSUUIEDeviceType                              | PRI 4ESS UUIE Device Type                                                         |
 |                                                              | SMDICallDelayTimer                                 | SMDI Call Delay Timer                                                             |
 |                                                              | StableIn4Flag                                      | Stable in State 4 Flag                                                            |
 |                                                              | OptimizeMGCPRegistration                           | Optimize MGCP Registration                                                        |
 |                                                              | EnableAutoRegistrationforFXSports                  | Enable Auto Registration for FXS ports                                            |
 |                                                              | SuppressOutOfChansEvents                           | Suppress Out-of-Channels Alarms                                                   |
 |                                                              | TimerT1Frame_msec                                  | I-Frame Timer                                                                     |
+|                                                              | ConvertProgressToDisconnect                        | Convert Progress to Disconnect for User Side PRI EURO                             |
 |                                                              | UserUserIEStatus                                   | User-to-User IE Status                                                            |
 |                                                              | ConvertEuropeanProgressMessagetoAlerting           | Convert European Progress Message to Alerting                                     |
 |                                                              | EnableDmsPriNotifyMessageFromUserToNetwork         | Enable DMS PRI Notify Message from User to Network                                |
 |                                                              | AuditOosChannelTimer                               | Audit OOS Channels Interval                                                       |
+|                                                              | EnableDigitResetDuringHookFlash                    | Use * Key to Erase Dialed Digits During Hookflash Transfer                        |
+|                                                              | IncomingCallingPartyNationalNumberPrefixMGCP       | Incoming Calling Party National Number Prefix - MGCP                              |
+|                                                              | IncomingCallingPartyInternationalNumberPrefixMGCP  | Incoming Calling Party International Number Prefix - MGCP                         |
+|                                                              | IncomingCallingPartySubscriberNumberPrefixMGCP     | Incoming Calling Party Subscriber Number Prefix - MGCP                            |
+|                                                              | IncomingCallingPartyUnknownNumberPrefixMGCP        | Incoming Calling Party Unknown Number Prefix - MGCP                               |
 |                                                              | DigitalAndAnalogPortsEnabled                       | Digital and Analog Ports Enabled                                                  |
+|                                                              | AllowLayer1InfoForPriBearerCapability              | Allow Layer 1 info for Pri Bearer Capability for V110 calls                       |
 |                                                              | AcceptBlindTCPConnection                           | Accept Unknown TCP Connection                                                     |
+|                                                              | AllowTCPKeepAlivesForH323                          | Allow TCP KeepAlives For H323                                                     |
 |                                                              | BRQEnabled                                         | BRQ Enabled                                                                       |
 |                                                              | CallPresent6DisconnFlag                            | Call Present Disconnect Flag                                                      |
+|                                                              | EnableH323QuietClear                               | Allow Peer to Preserve H.323 Calls                                                |
+|                                                              | BlockConnectedNumberIE                             | Block Connected Number IE                                                         |
+|                                                              | ProcessInboundH245AddressInH225Setup               | Process Inbound H.245 Address in H225Setup                                        |
 |                                                              | CheckProgressIndicatorBeforeEstablishingMedia      | Check Progress Indicator Before Establishing Media                                |
+|                                                              | ConvertProgressToReleaseComplete                   | Convert Progress To ReleaseComplete for H.323 Gateway Calls                       |
 |                                                              | H225BlockSetupDestination                          | H225 Block Setup Destination                                                      |
 |                                                              | H225DBRetryTimeout                                 | H225 DB Retry Timer                                                               |
 |                                                              | H225DeviceConnectAtConnectTime                     | H225 Device Connect Timer                                                         |
@@ -347,6 +429,14 @@
 |                                                              | HostNameIPAddressOfGKWithRASUdpPort1719            | Host Name/IP Address of GK That Will Use RAS UDP Port 1719                        |
 |                                                              | FailCallIfMTPAllocationFails                       | Fail Call If MTP Allocation Fails                                                 |
 |                                                              | OverlapReceivingForH323Flag                        | Overlap Receiving Flag for H323                                                   |
+|                                                              | IncomingCallingPartyNationalNumberPrefixH323       | Incoming Calling Party National Number Prefix - H.323                             |
+|                                                              | IncomingCallingPartyInternationalNumberPrefixH323  | Incoming Calling Party International Number Prefix - H.323                        |
+|                                                              | IncomingCallingPartySubscriberNumberPrefixH323     | Incoming Calling Party Subscriber Number Prefix - H.323                           |
+|                                                              | IncomingCallingPartyUnknownNumberPrefixH323        | Incoming Calling Party Unknown Number Prefix - H.323                              |
+|                                                              | IncomingCalledPartyNationalNumPrefixH323           | Incoming Called Party National Number Prefix - H.323                              |
+|                                                              | IncomingCalledPartyInternationalNumPrefixH323      | Incoming Called Party International Number Prefix - H.323                         |
+|                                                              | IncomingCalledPartySubscriberNumPrefixH323         | Incoming Called Party Subscriber Number Prefix - H.323                            |
+|                                                              | IncomingCalledPartyUnknownNumPrefixH323            | Incoming Called Party Unknown Number Prefix - H.323                               |
 |                                                              | AllocateTranscoderForH323ToEOCall                  | Allocate Transcoder for H.323 on Early Offer SIP Trunk for Calls with Early Media |
 |                                                              | SIPInteroperabilityEnabled                         | SIP Interoperability Enabled                                                      |
 |                                                              | RetryCountSIPBye                                   | Retry Count for SIP Bye                                                           |
@@ -376,10 +466,13 @@
 |                                                              | SIPStationUDPPortThrottleRateThreshold             | SIP Station UDP Port Throttle Threshold                                           |
 |                                                              | SIPTrunkUDPPortThrottleRateThreshold               | SIP Trunk UDP Port Throttle Threshold                                             |
 |                                                              | SIPV150OutboundSDPOfferFiltering                   | SIP V.150 Outbound SDP Offer Filtering                                            |
+|                                                              | SIPMaxIncomingMessageSize                          | SIP Max Incoming Message Size                                                     |
+|                                                              | SIPMaxIncomingMessageHeaders                       | SIP Max Incoming Message Headers                                                  |
 |                                                              | SendSIPMulticastTTLinSDP                           | Send SIP Multicast TTL in SDP                                                     |
 |                                                              | SIPPublishTimer                                    | Default PUBLISH Expiration Timer                                                  |
 |                                                              | SIPPublishMinTimer                                 | Minimum PUBLISH Expiration Timer                                                  |
 |                                                              | SIPPublishTrunk                                    | IM and Presence Publish Trunk                                                     |
+|                                                              | IncomingCallingPartyUnknownNumberPrefixSIP         | Incoming Calling Party Unknown Number Prefix - SIP                                |
 |                                                              | Send181ResponseForCallForward                      | Send 181 Call Is Being Forwarded                                                  |
 |                                                              | DelaySending181MessageUntil18X                     | Delay Sending 181 until 180/183 message is received                               |
 |                                                              | FailSIPTrunkCallIfMTPAllocationFails               | Fail Call Over SIP Trunk if MTP Allocation Fails                                  |
@@ -388,6 +481,8 @@
 |                                                              | SIPRegistrationAuthorizationEnabled                | SIP Registration Authorization Enabled                                            |
 |                                                              | CallParkDisplayTime                                | Call Park Display Timer                                                           |
 |                                                              | CallerIDDisplayPriorityEnabled                     | Caller ID Display Priority Enabled                                                |
+|                                                              | UseAllCallParkNumbersOnceBeforeReusing             | Use All Call Park Numbers Once Before Reusing                                     |
+|                                                              | EnableClusterwideCallPark                          | Enable Clusterwide CallPark Number/Ranges                                         |
 |                                                              | CallParkReversionTimeout                           | Call Park Reversion Timer                                                         |
 |                                                              | ParkMonitoringReversionTimeout                     | Park Monitoring Reversion Timer                                                   |
 |                                                              | ParkMonitoringPeriodicReversionTimeout             | Park Monitoring Periodic Reversion Timer                                          |
@@ -413,10 +508,13 @@
 |                                                              | MaxAdHocConference                                 | Maximum Ad Hoc Conference                                                         |
 |                                                              | MaxMeetMeConferenceUnicast                         | Maximum MeetMe Conference Unicast                                                 |
 |                                                              | AdvanceAdhocConference                             | Advanced Ad Hoc Conference Enabled                                                |
+|                                                              | NonLinearAdhocConferenceLinkingEnabled             | Non-linear Ad Hoc Conference Linking Enabled                                      |
 |                                                              | ChooseEncryptedInsteadOfVideo                      | Choose Encrypted Audio Conference Instead Of Video Conference                     |
 |                                                              | MinimumVideoCapableParticipants                    | Minimum Video Capable Participants To Allocate Video Conference                   |
+|                                                              | AllocateVideoWhenVideoBridgeHasHigherPriority      | Allocate Video Conference Bridge For Audio Only Conferences When The Video Conference Bridge Has Higher Priority |
 |                                                              | EnableClickToConferenceForThirdPartyApps           | Enable Click-to-Conference for Third-Party Applications                           |
 |                                                              | IMSConferenceFactoryURI                            | IMS Conference Factory URI                                                        |
+|                                                              | MCUConferenceBridgeCustomLayoutIndex               | MCU Conference Bridge Custom Layout Index                                         |
 |                                                              | ClusterConferencingPrefixId                        | Cluster Conferencing Prefix Identifier                                            |
 |                                                              | QuietClearReleaseStopTimer                         | Conference Preservation Expiry Timer (minutes)                                    |
 |                                                              | SecureCallIconDisplayPolicy                        | Secure Call Icon Display Policy                                                   |
@@ -426,8 +524,12 @@
 |                                                              | RetainFwdInfoAfterOffhook                          | Retain Forward Information                                                        |
 |                                                              | ForwardByRerouteEnabledFlag                        | Forward By Reroute Enabled                                                        |
 |                                                              | TransformForwardByRerouteDestFlag                  | Transform Forward by Reroute Destination                                          |
+|                                                              | VMBToDivertingNrEnabledFlag                        | Include Voice Mailbox Address in QSIG Call Diversion APDUs                        |
+|                                                              | CopyQsigDivertingNrToRedirNrFlag                   | Copy QSIG DivertingNr to Redirecting Number                                       |
+|                                                              | CopyQsigDivReasonToOrigDivReasonFlag               | Copy QSIG DiversionReason to OriginalDiversionReason                              |
 |                                                              | AlwaysForwardSwitchVMCallsFlag                     | Always Forward Switch Voice Mail Calls                                            |
 |                                                              | ForwardByRerouteT1Timer                            | Forward By Reroute T1 Timer                                                       |
+|                                                              | QsigOrigVMBoxTranslation                           | Transform Inbound QSIG originalCalledNr                                           |
 |                                                              | IncludeOrigCalledInfoQSIGCallDiv                   | Include Original Called Info for Q.SIG Call Diversions                            |
 |                                                              | FWDPrivateNumberingPlanEncoding                    | Set Private Numbering Plan for Call Forward                                       |
 |                                                              | FWDPrivateTypeOfNumber                             | Set Type of Number for Call Forward                                               |
@@ -467,6 +569,9 @@
 |                                                              | CBBPathReservationResponse                         | No Path Reservation                                                               |
 |                                                              | CBBPrivateNumberingPlanEncoding                    | Set Private Numbering Plan for Call Back                                          |
 |                                                              | CBBPrivateTypeOfNumber                             | Set Type of Number for Call Back                                                  |
+|                                                              | CBBRetResultOperationValue                         | Return Result Operation Value                                                     |
+|                                                              | CBBRetResultOptionalParam                          | Return Result no-path-reservation and retain-service Value                        |
+|                                                              | CBClearMonitoringCall                              | Allow Originating PINX to Stop Monitoring After Call Back                         |
 |                                                              | PlayRecordingToneToObservedTarget                  | Play Recording Notification Tone To Observed Target                               |
 |                                                              | PlayRecordingToneToObservedConnectedParties        | Play Recording Notification Tone To Observed Connected Parties                    |
 |                                                              | AuthenticatedPhoneRecording                        | Authenticated Phone Recording                                                     |
@@ -476,6 +581,7 @@
 |                                                              | SingleButtonBargeCBargePolicy                      | Single Button Barge/CBarge Policy                                                 |
 |                                                              | AllowBargingWhenRinging                            | Allow Barging When Ringing                                                        |
 |                                                              | PlaySecureIndicationTone                           | Play Tone to Indicate Secure/Non-Secure Call Status                               |
+|                                                              | MGCPGWPlayToneDelayTimer                           | MGCP Gateway Play Tone Delay Timer                                                |
 |                                                              | ExternalCallControlDiversionMaximumHopCount        | External Call Control  Diversion Maximum Hop Count                                |
 |                                                              | ExternalCallControlDiversionMaxHopToPatternOrDN    | Maximum External Call Control Diversion Hops to Pattern or DN                     |
 |                                                              | ExternalCallControlRoutingRequestTimer             | External Call Control Routing Request Timer                                       |
@@ -486,8 +592,13 @@
 |                                                              | StopRoutingOnOutOfBandwidthFlag                    | Stop Routing on Out of Bandwidth Flag                                             |
 |                                                              | StopRoutingOnUnallocatedNumberFlag                 | Stop Routing on Unallocated Number Flag                                           |
 |                                                              | StopRoutingOnUserBusyFlag                          | Stop Routing on User Busy Flag                                                    |
+|                                                              | StopRoutingOnQ931DisconnectCauseValues             | Stop Routing on Q.931 Disconnect Cause Code                                       |
 |                                                              | RouteClassTrunkSignalingEnabled                    | Route Class Trunk Signaling Enabled                                               |
 |                                                              | SIPRouteClassNamingAuthority                       | SIP Route Class Naming Authority                                                  |
+|                                                              | SIPClearChannelDataRouteClassLabel                 | SIP Clear Channel Data Route Class Label                                          |
+|                                                              | SIPSatelliteAvoidanceRouteClassLabel               | SIP Satellite Avoidance Route Class Label                                         |
+|                                                              | SIPHotlineVoiceRouteClassLabel                     | SIP Hotline Voice Route Class Label                                               |
+|                                                              | SIPHotlineDataRouteClassLabel                      | SIP Hotline Data Route Class Label                                                |
 |                                                              | StopRoutingOnOutOfBandwidthFlagForHuntList         | Stop Hunting on Out of Bandwidth Flag                                             |
 |                                                              | UsePickupGroupOfLineGroupMemberDN                  | Use Pickup Group Of Line Group Member DN                                          |
 |                                                              | ExternalQoSEnabledFlag                             | External QoS Enabled                                                              |
@@ -509,9 +620,13 @@
 |                                                              | EnableSourceVerificationForMediaDevices            | Enable Source IP Address Verification for Software Media Devices                  |
 |                                                              | AlwaysUseDialtoneSetting                           | Always Use Dial Tone Setting                                                      |
 |                                                              | RestartCcmOnInitializationException                | Restart Cisco CallManager on Initialization Exception                             |
+|                                                              | DialingForestDumpEnabled                           | Dialing Forest Dump Enabled                                                       |
+|                                                              | SCCPBatchLatencyTimer                              | Bundle Outbound SCCP Messages Timer                                               |
 |                                                              | DigitAnalysisTimer                                 | Digit Analysis Timer                                                              |
 |                                                              | StatisticsEnabled                                  | Statistics Enabled                                                                |
 |                                                              | RealTimeMonitoringToolDisplayPreference            | Real-Time Monitoring Tool Display Preference for Calls                            |
+|                                                              | DevicePropagationQueueDepth                        | Device Registration/Unregistration Propagation Queue Depth                        |
+|                                                              | SMEventsDebugEnabled                               | Subscription Manager Events Debug Enabled                                         |
 |                                                              | CcmPriorityClass                                   | Priority Class                                                                    |
 |                                                              | DSCPForAudioCalls                                  | DSCP for Audio Calls                                                              |
 |                                                              | DSCPForVideoCalls                                  | DSCP for Video Calls                                                              |
@@ -638,8 +753,8 @@
 |                                                              | DeductAudioBandwidthFromAudioPoolForVideoCall      | Deduct Audio Bandwidth Portion from Audio Pool for a Video Call                   |
 |                                                              | AlternateEmergencyDestination                      | Alternate Destination for Emergency Call                                          |
 |                                                              | AlternateEmergencyCSS                              | Alternate Calling Search Space for Emergency Call                                 |
-| Cisco CallManager SNMP Service (Active)                      |                                                    |                                                                                   |
-| Cisco Certificate Authority Proxy Function (Active)          |                                                    |                                                                                   |
+| Cisco CallManager SNMP Service (Inactive)                    |                                                    |                                                                                   |
+| Cisco Certificate Authority Proxy Function (Inactive)        |                                                    |                                                                                   |
 |                                                              | CAPFCertGenMethod                                  | Certificate Issuer to Endpoint                                                    |
 |                                                              | CAPFCertValidityDuration                           | Duration Of Certificate Validity (in days)                                        |
 |                                                              | CAPFKeyGenTimer                                    | Maximum Allowable Time For Key Generation                                         |
@@ -650,31 +765,46 @@
 |                                                              | OnlineCAType                                       | Online CA Type                                                                    |
 |                                                              | OnlineCAUsername                                   | Online CA Username                                                                |
 |                                                              | OnlineCAPassword                                   | Online CA Password                                                                |
+|                                                              | CertificateEnrollmentProfileLabel                  | Certificate Enrollment Profile Label                                              |
 | Cisco DRF Local (Active)                                     |                                                    |                                                                                   |
 | Cisco DRF Master (Active)                                    |                                                    |                                                                                   |
 | Cisco Database Layer Monitor (Active)                        |                                                    |                                                                                   |
+|                                                              | DeviceNameValidationEnabled                        | Device Name Validation                                                            |
 |                                                              | CDRPurgeTime                                       | Maintenance Time                                                                  |
 |                                                              | CDRPurgeWindow                                     | Phone Status Update Window                                                        |
 |                                                              | TableOutOfSync                                     | Table Out of Sync Detection                                                       |
 |                                                              | SortEndUserLocale                                  | Locale Specific Sorting                                                           |
+|                                                              | AxlChangeNotification                              | AXL Change Notification                                                           |
+|                                                              | AxlChangeNotificationQueueSize                     | AXL Change Notification Queue Size                                                |
+|                                                              | ValidNamespace                                     | Send Valid Namespace in AXL Response                                              |
+|                                                              | SPLTrace                                           | Database Trigger and Stored Procedure Trace Level                                 |
+|                                                              | SPLAppTraceLevel                                   | Database Trigger and Stored Procedure Application Trace Level                     |
 |                                                              | MaintenanceTaskTrace                               | MaintenanceTaskTrace                                                              |
+|                                                              | EnableAXLEncodingInfo                              | Include Encoding Information in AXL Response                                      |
+|                                                              | CheckForNamespaceInTag                             | Check for namespace attributes in AXL requests                                    |
+|                                                              | ValidateServiceURL                                 | Validate Service URL                                                              |
+|                                                              | ReplicationMonitorTimeout                          | ReplicationMonitorTimeout                                                         |
+|                                                              | MaximumInactivePeriod                              | Disable User Accounts unused for (days)                                           |
+|                                                              | DisableUser                                        | Disable Unused User Accounts of the type                                          |
 | Cisco Device Activation Service (Active)                     |                                                    |                                                                                   |
 |                                                              | ActivationCodeExpiry                               | Activation Code Time To Live (hours)                                              |
-| Cisco DirSync (Active)                                       |                                                    |                                                                                   |
+| Cisco DirSync (Inactive)                                     |                                                    |                                                                                   |
 |                                                              | MaxNumberOfAgreements                              | Maximum Number Of Agreements                                                      |
 |                                                              | MaxNumberOfHost                                    | Maximum Number Of Hosts                                                           |
 |                                                              | RetryDelayOnFailureHost                            | Retry Delay On Host Failure (secs)                                                |
 |                                                              | RetryDelayOnFailureHostList                        | Retry Delay On HostList Failure (mins)                                            |
 |                                                              | LDAPConnectionTimeout                              | LDAP Connection Timeout (secs)                                                    |
 |                                                              | DelayedSyncStart                                   | Delayed Sync Start time (mins)                                                    |
-| Cisco Directory Number Alias Lookup (Active)                 |                                                    |                                                                                   |
+| Cisco Directory Number Alias Lookup (Inactive)               |                                                    |                                                                                   |
 |                                                              | TimeOutThresholdIntervalLookup                     | Timeout for Initial LDAP Operation                                                |
 |                                                              | TimeOutThresholdIntervalForLDAPRetryLookup         | Timeout for Retried LDAP Operation                                                |
 |                                                              | AllowedLDAPRetryCountLookup                        | Number of LDAP Operation Retries Allowed                                          |
 |                                                              | AllowedKeepAliveRetryCountLookup                   | Number of Successful KeepAlives before Failback                                   |
 |                                                              | ErrorCheckEnabledLookup                            | Perform Error Tracking                                                            |
 |                                                              | ThresholdForErrorsLookup                           | Maximum LDAP Error Threshold                                                      |
-| Cisco Directory Number Alias Sync (Active)                   |                                                    |                                                                                   |
+|                                                              | TimeoutForLDAPContextLookup                        | TimeOut for LDAP Connection in Minutes                                            |
+|                                                              | MaxRecordsPerContextLookup                         | Maximum Operations Per LDAP Connection                                            |
+| Cisco Directory Number Alias Sync (Inactive)                 |                                                    |                                                                                   |
 |                                                              | ProcessuserThreadSleepInterval                     | Sync Frequency                                                                    |
 |                                                              | RecordSizeForUpdate                                | Block Size For Update                                                             |
 |                                                              | UpdateSleepInterval                                | Pause Interval Between Update Blocks                                              |
@@ -685,12 +815,15 @@
 |                                                              | ErrorCheckEnabledSync                              | Perform Error Tracking                                                            |
 |                                                              | ThresholdForErrorsSync                             | Maximum LDAP Error Threshold                                                      |
 |                                                              | PUTFailCount                                       | Maximum Retries Per Failed LDAP Operation                                         |
-| Cisco Extended Functions (Active)                            |                                                    |                                                                                   |
+|                                                              | TimeoutForLDAPContextSync                          | TimeOut for LDAP Connection in Minutes                                            |
+|                                                              | MaxRecordsPerContextSync                           | Maximum Operations Per LDAP Connection                                            |
+| Cisco Extended Functions (Inactive)                          |                                                    |                                                                                   |
 |                                                              | QRTSecurityInstanceID                              | CAPF Profile Instance Id for Secure Connection to CTI Manager                     |
 |                                                              | AppProviderOpenTimeOut                             | Provider Open Call Timeout                                                        |
 |                                                              | AppHearBeatInterval                                | Heartbeat Interval Timeout                                                        |
 |                                                              | AppConnectRetryInterval                            | Connection Retry Timeout                                                          |
 |                                                              | AppSyncReqTimeOut                                  | Synchronous Request Timeout                                                       |
+|                                                              | CBBChangeNotifyPort                                | CBB Change Notification TCP Port                                                  |
 |                                                              | ExtendedFeedback                                   | Display Extended QRT Menu Choices                                                 |
 |                                                              | PollingDuration                                    | Streaming Statistics Polling Duration                                             |
 |                                                              | PollingFrequency                                   | Streaming Statistics Polling Frequency                                            |
@@ -701,6 +834,7 @@
 |                                                              | maxDurationEnable                                  | Enforce Intra-cluster Maximum Login Time                                          |
 |                                                              | maxDuration                                        | Intra-cluster Maximum Login Time                                                  |
 |                                                              | EmccMaxLoginDuration                               | Inter-cluster Maximum Login Time                                                  |
+|                                                              | maxConcurrentSessions                              | Maximum Concurrent Requests                                                       |
 |                                                              | multiDevHoteling                                   | Multiple Login Behavior                                                           |
 |                                                              | alphaUserID                                        | Alphanumeric User ID                                                              |
 |                                                              | rememberUser                                       | Remember the Last User Logged In                                                  |
@@ -709,8 +843,13 @@
 |                                                              | headsetBasedEMAutoLogoutTimer                      | Auto logout timer after headset disconnect (minutes)                              |
 |                                                              | autoLoginForHeadsetBasedEM                         | PIN entry for headset-based sign in                                               |
 |                                                              | headsetBasedAutoLoginTimer                         | Auto login timer after headset connect (seconds)                                  |
-| Cisco Headset Service (Active)                               |                                                    |                                                                                   |
-| Cisco IP Manager Assistant (Active)                          |                                                    |                                                                                   |
+|                                                              | validateIPForLogout                                | Validate IP Address                                                               |
+|                                                              | trustedIPList                                      | Trusted List of IPs                                                               |
+|                                                              | allowProxy                                         | Allow Proxy                                                                       |
+|                                                              | EmccAllowProxy                                     | EMCC Allow Proxy                                                                  |
+|                                                              | emDevCacheSize                                     | Extension Mobility Cache Size                                                     |
+| Cisco Headset Service (Inactive)                             |                                                    |                                                                                   |
+| Cisco IP Manager Assistant (Inactive)                        |                                                    |                                                                                   |
 |                                                              | primaryCTIManagerAddress                           | CTIManager (Primary) IP Address                                                   |
 |                                                              | backupCTIManagerAddress                            | CTIManager (Backup) IP Address                                                    |
 |                                                              | routePointDeviceName                               | Route Point Device Name for Proxy Mode                                            |
@@ -725,6 +864,11 @@
 |                                                              | rnaTimeout                                         | Cisco IPMA RNA Timeout                                                            |
 |                                                              | securityFlag                                       | CTIManager Connection Security Flag                                               |
 |                                                              | isManagerRedirect                                  | Redirect call to Manager upon failure to reach Assistant                          |
+|                                                              | multipleInstancesIPMA                              | Enable Multiple Active Mode                                                       |
+|                                                              | poolBIPMAPrimaryServer                             | Pool 2: Cisco IPMA Server (Primary) IP Address                                    |
+|                                                              | poolBIPMABackupServer                              | Pool 2: Cisco IPMA Server (Backup) IP Address                                     |
+|                                                              | poolCIPMAPrimaryServer                             | Pool 3: Cisco IPMA Server (Primary) IP Address                                    |
+|                                                              | poolCIPMABackupServer                              | Pool 3: Cisco IPMA Server (Backup) IP Address                                     |
 |                                                              | softkeyAssistant                                   | Assistant Softkey Template                                                        |
 |                                                              | softkeyManager                                     | Manager Softkey Template for Proxy Mode                                           |
 |                                                              | softkeyManagerShared                               | Manager Softkey Template for Shared Mode                                          |
@@ -738,7 +882,7 @@
 |                                                              | proxyRangeEnd                                      | Ending Directory Number                                                           |
 |                                                              | trimManagerLine                                    | Number of Characters to be Stripped from Manager DN                               |
 |                                                              | proxyPrefix                                        | Prefix for Manager DN                                                             |
-| Cisco IP Voice Media Streaming App (Active)                  |                                                    |                                                                                   |
+| Cisco IP Voice Media Streaming App (Inactive)                |                                                    |                                                                                   |
 |                                                              | ANN_CallCount                                      | Call Count                                                                        |
 |                                                              | ANN_RunFlag                                        | Run Flag                                                                          |
 |                                                              | IVR_CallCount                                      | Call Count                                                                        |
@@ -752,12 +896,19 @@
 |                                                              | NumberOfPorts                                      | Number Of Ports                                                                   |
 |                                                              | DefaultMOHCodec                                    | Supported MOH Codecs                                                              |
 |                                                              | DefaultMOHFixedAudioPerformance                    | MOH Fixed Audio Quality level                                                     |
+|                                                              | DefaultMOHDBLevel                                  | Default MOH Volume Level                                                          |
 |                                                              | IpTosMediaResource2Cm                              | IP DSCP to Cisco Unified Communications Manager                                   |
+|                                                              | McastMOH_G711PktSize                               | Multicast MOH G.711 packet size                                                   |
+|                                                              | McastMOH_G729PktSize                               | Multicast MOH G.729 packet size                                                   |
+|                                                              | McastMOH_WBPktSize                                 | Multicast MOH Wideband packet size                                                |
 |                                                              | MulticastMOH_DSCP                                  | Multicast MOH IP DSCP                                                             |
 |                                                              | DTMFDuration                                       | MTP DTMF Duration                                                                 |
 |                                                              | DTMFPower                                          | MTP DTMF Power (volume)                                                           |
 |                                                              | MOHPortAssignmentBasedOnAudioSource                | Assign MOH stream port number based on Audio Source ID                            |
-| Cisco Intercluster Lookup Service (Active)                   |                                                    |                                                                                   |
+|                                                              | ForceANNtobeNonSecure                              | Make Annunciator Non-secure when Cluster Security is Mixed                        |
+|                                                              | ForceIVRtobeNonSecure                              | Make IVR Non-secure when Cluster Security is Mixed                                |
+|                                                              | ForceMOHtobeNonSecure                              | Make MOH Non-secure when Cluster Security is Mixed                                |
+| Cisco Intercluster Lookup Service (Inactive)                 |                                                    |                                                                                   |
 |                                                              | IlsListeningPort                                   | Listening Port for Certificate Based Authentication (TLS)                         |
 |                                                              | IlsNonTLSListeningPort                             | Listening Port for Password Based Authentication (non-TLS)                        |
 |                                                              | IlsSyncThrottle                                    | ILS Sync Throttle                                                                 |
@@ -768,9 +919,10 @@
 |                                                              | SdlTraceDataSize                                   | SDL Trace Data Size                                                               |
 |                                                              | SdlTraceFlag                                       | SDL Trace Flag                                                                    |
 |                                                              | SdlTraceTypeFlags                                  | SDL TraceType Flags                                                               |
-| Cisco Location Bandwidth Manager (Active)                    |                                                    |                                                                                   |
+| Cisco Location Bandwidth Manager (Inactive)                  |                                                    |                                                                                   |
 |                                                              | CallTreatmentWhenNoPathIsAvailable                 | Call Treatment When No Path is Available                                          |
 |                                                              | DSCPForLBMLinks                                    | DSCP for LBM Protocol Links                                                       |
+|                                                              | OptimizedReservationRefreshMechanismEnabled        | Optimized Reservation Refresh Mechanism Enabled                                   |
 |                                                              | SdlTraceDataFlags                                  | SDL Trace Data Flags                                                              |
 |                                                              | SdlTraceFlushImmed                                 | SDL Trace Flush Immediately                                                       |
 |                                                              | SdlTraceDataSize                                   | SDL Trace Data Size                                                               |
@@ -798,9 +950,13 @@
 |                                                              | RTMTReporterNode                                   | RTMT Reporter Designated Node                                                     |
 |                                                              | RTMTReportGenerationTime                           | RTMT Report Generation Time                                                       |
 |                                                              | RTMTReportDeletionAge                              | RTMT Report Deletion Age                                                          |
-| Cisco TAPS Service (Active)                                  |                                                    |                                                                                   |
+| Cisco TAPS Service (Inactive)                                |                                                    |                                                                                   |
 |                                                              | ConfigureTAPS                                      | Auto-Registration Options for TAPS                                                |
 | Cisco Tftp (Active)                                          |                                                    |                                                                                   |
+|                                                              | MaximumServingThreadCount                          | Maximum Serving Count                                                             |
+|                                                              | BuildCNFType                                       | Build CNF Files                                                                   |
+|                                                              | ExitOnException                                    | Exit When Exception is Caught                                                     |
+|                                                              | AuditRemoteFiles                                   | Cleanup files fetched from remote clusters                                        |
 |                                                              | SdlTraceDataFlags                                  | SDL Trace Data Flags                                                              |
 |                                                              | SdlTraceFlushImmed                                 | SDL Trace Flush Immediately                                                       |
 |                                                              | SdlTraceDataSize                                   | SDL Trace Data Size                                                               |
@@ -821,7 +977,7 @@
 |                                                              | applyDialrulesSOAP                                 | Apply Application Dial Rules on SOAP Dial Request                                 |
 |                                                              | securityFlag                                       | CTI Manager Connection Security Flag                                              |
 |                                                              | makeCallProxyAPI                                   | MakeCallProxy HTTP Methods                                                        |
-| Cisco Wireless Controller Synchronization Service (Active)   |                                                    |                                                                                   |
+| Cisco Wireless Controller Synchronization Service (Inactive) |                                                    |                                                                                   |
 |                                                              | SNMPRequestTimeout                                 | SNMP Request Timeout(secs)                                                        |
 |                                                              | SNMPRequestRetries                                 | SNMP Request Retries                                                              |
 |                                                              | SNMPRequestQuerySize                               | SNMP Request Query Size                                                           |

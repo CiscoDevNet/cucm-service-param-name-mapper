@@ -11,6 +11,10 @@
         "label": "Max Number of Device Level Trace"
       },
       {
+        "id": "EnableTraceCompression",
+        "label": "Trace Compression"
+      },
+      {
         "id": "DSCPForSCCPPhoneServices",
         "label": "DSCP for Phone-based Services"
       },
@@ -77,6 +81,10 @@
       {
         "id": "FeaturePreviewEnablement",
         "label": "Feature Preview Enablement"
+      },
+      {
+        "id": "HostnameVerificationPolicy",
+        "label": "Hostname (FQDN) Verification Policy"
       },
       {
         "id": "CCMAdminMaxItemsInList",
@@ -287,6 +295,10 @@
         "label": "Terminate User Sessions on Privilege or Credential Change"
       },
       {
+        "id": "ResetPhonesOnCertChange",
+        "label": "Phone Interaction on Certificate Update"
+      },
+      {
         "id": "CertificateValidityCheck",
         "label": "Certificate Validity Check"
       },
@@ -385,6 +397,10 @@
       {
         "id": "PerfmonQueueLimit",
         "label": "Performance Queue Limit"
+      },
+      {
+        "id": "MaximumPerfmonCountersPerSession",
+        "label": "Maximum Performance Counters Per Session"
       },
       {
         "id": "AllowedCdrGetFileQueriesPerMinute",
@@ -527,6 +543,10 @@
         "label": "Enable Logical Partitioning"
       },
       {
+        "id": "isCustomLogicalPartitioningApplied",
+        "label": "Custom Logical Partitioning Applied"
+      },
+      {
         "id": "defaultGeolocation",
         "label": "Default Geolocation"
       },
@@ -589,6 +609,10 @@
       {
         "id": "UseSSOforRTMT",
         "label": "Use SSO for RTMT"
+      },
+      {
+        "id": "OAuthAccessTokenForDevices",
+        "label": "OAuth Access Token for Devices"
       },
       {
         "id": "ProvisioningReplacementPhoneforEndUser",
@@ -666,6 +690,38 @@
     "service": "Cisco CTIManager (Active)",
     "parameters": [
       {
+        "id": "CTILoginRequestTimeout",
+        "label": "CTI Login Request Timer"
+      },
+      {
+        "id": "CTIProgLogsNumFiles",
+        "label": "CTI ProgLogs Max Number of Files"
+      },
+      {
+        "id": "CTIRequestTimeout",
+        "label": "CTI Request Timer"
+      },
+      {
+        "id": "MaxCTIConnections",
+        "label": "Maximum CTI Connections"
+      },
+      {
+        "id": "MaxSimultaneousCTILogins",
+        "label": "Maximum Simultaneous CTI Connections"
+      },
+      {
+        "id": "PluginLocationURL",
+        "label": "Plugin Location URL"
+      },
+      {
+        "id": "SdlTraceDataFlags",
+        "label": "SDL Trace Data Flags"
+      },
+      {
+        "id": "SdlTraceDataSize",
+        "label": "SDL Trace Data Size"
+      },
+      {
         "id": "SdlTraceFlag",
         "label": "SDL Trace Flag"
       },
@@ -674,8 +730,28 @@
         "label": "SDL Trace Type Flags"
       },
       {
+        "id": "ApplicationHeartbeatMaxInterval",
+        "label": "Application Heartbeat Maximum Interval"
+      },
+      {
+        "id": "ApplicationHeartbeatMinInterval",
+        "label": "Application Heartbeat Minimum Interval"
+      },
+      {
+        "id": "HuntCallClearDelayTimer",
+        "label": "Hunt Call Clear Delay Timer"
+      },
+      {
         "id": "MaxSSOTokenSize",
         "label": "Maximum SSO Token Size For CTI User Authentication"
+      },
+      {
+        "id": "MaxDevicesPerProvider",
+        "label": "Maximum Devices Per Provider"
+      },
+      {
+        "id": "MaxDevicesPerNode",
+        "label": "Maximum Devices Per Node"
       },
       {
         "id": "RequirePublicKeyEncryption",
@@ -684,11 +760,71 @@
       {
         "id": "DefaultIPAddrMode",
         "label": "IP Addressing Mode for devices"
+      },
+      {
+        "id": "CTIDatabaseQueriesPerIteration",
+        "label": "CTI Database Device Queries Per Iteration"
+      },
+      {
+        "id": "CTIDatabaseQueryInterval",
+        "label": "CTI Database Device Query Interval"
+      },
+      {
+        "id": "CTIDbDnQueryInterval",
+        "label": "CTI Database Directory Number Query Interval"
+      },
+      {
+        "id": "CTIDeviceRehomingInterval",
+        "label": "CTI Device Rehoming Interval"
+      },
+      {
+        "id": "CTIDevicesToRehomePerIteration",
+        "label": "CTI Devices To Rehome Per Iteration"
+      },
+      {
+        "id": "CTIRegUnRegEventsPerIteration",
+        "label": "CTI Register/Unregister Events Per Iteration"
+      },
+      {
+        "id": "CTISendRegUnRegInterval",
+        "label": "CTI Send Register/Unregister Event Interval"
+      },
+      {
+        "id": "CTIInstanceIdRetryCount",
+        "label": "CTI InstanceId Retry Count"
+      },
+      {
+        "id": "CTIInstanceIdRetryCounterCleanupDelay",
+        "label": "CTI InstanceId Retry Counter Cleanup Delay"
+      },
+      {
+        "id": "CtiDeviceOpenRetryDelay",
+        "label": "CTI Device Open Retry Delay"
+      },
+      {
+        "id": "CtiDeviceOpenRetryCount",
+        "label": "CTI Device Open Retry Count"
+      },
+      {
+        "id": "DSCPForICCP",
+        "label": "DSCP for ICCP Protocol Links"
+      },
+      {
+        "id": "DSCPForCTI2Apps",
+        "label": "DSCP IP CTIManager to Application"
+      },
+      {
+        "id": "SdlListeningPort",
+        "label": "SDL Listening Port"
+      },
+      {
+        "id": "SdlMaxUnHandledExceptions",
+        "label": "Suppress Debug Info for Router Death"
       }
     ]
   },
   {
-    "service": "Cisco CTL Provider (Active)",
+    "service": "Cisco CTL Provider (Inactive)",
     "parameters": []
   },
   {
@@ -717,6 +853,26 @@
       {
         "id": "MemoryThrottlingEnabled",
         "label": "Enable Memory Throttling"
+      },
+      {
+        "id": "MemoryThrottlingVirtualMemorySize",
+        "label": "Memory Throttling Virtual Memory Size"
+      },
+      {
+        "id": "MemoryThrottlingFreeBlocks",
+        "label": "Memory Throttling Free Blocks"
+      },
+      {
+        "id": "MemoryThrottlingDuration",
+        "label": "Memory Throttling Duration"
+      },
+      {
+        "id": "MemoryThrottlingRecovery",
+        "label": "Memory Throttling Recovery Duration"
+      },
+      {
+        "id": "CCTRegressionTestParam",
+        "label": "CCT Regression Test Only"
       },
       {
         "id": "CdrEnabled",
@@ -771,6 +927,10 @@
         "label": "Call Diagnostics Enabled"
       },
       {
+        "id": "DisplayFACInCDR",
+        "label": "Display FAC in CDR"
+      },
+      {
         "id": "ShowMemberDNinfinalCalledPartyNumber",
         "label": "Show Line Group Member DN in finalCalledPartyNumber CDR Field"
       },
@@ -801,6 +961,14 @@
       {
         "id": "CTISendFakeRingbackOn183SDP",
         "label": "CTI Report Ringback on SIP 183 with SDP"
+      },
+      {
+        "id": "disableNonRegisteredSCCPKeepAlives",
+        "label": "Disable Nonregistered SCCP KeepAlives"
+      },
+      {
+        "id": "CallForwardNotificationAllLines",
+        "label": "Call Forward Notification All Lines"
       },
       {
         "id": "RetainMediaOnDisconnectWithPIForActiveCall",
@@ -887,8 +1055,16 @@
         "label": "Tone on Hold Timer"
       },
       {
+        "id": "UnknownCallerId",
+        "label": "Unknown Caller ID"
+      },
+      {
         "id": "UnknownCallerIdFlag",
         "label": "Unknown Caller ID Flag"
+      },
+      {
+        "id": "UnknownCallerIdText",
+        "label": "Unknown Caller ID Text"
       },
       {
         "id": "CallClassification",
@@ -907,6 +1083,14 @@
         "label": "Always Use PIs With Original Dialed Number"
       },
       {
+        "id": "OutOfBandwidthCauseValue",
+        "label": "Out of Bandwidth Cause Code Substitution"
+      },
+      {
+        "id": "StripPlusForOutgoingCallsThroughGateway",
+        "label": "Strip + on Outbound Calls"
+      },
+      {
         "id": "FailCallIfTRPAllocationFails",
         "label": "Fail Call If Trusted Relay Point Allocation Fails"
       },
@@ -921,6 +1105,10 @@
       {
         "id": "EgressFacilityIECount",
         "label": "Egress FacilityIE Count"
+      },
+      {
+        "id": "EnableDeviceMobilityforTrunks",
+        "label": "Enable Device Mobility for Trunks"
       },
       {
         "id": "AlwayUsePrimeLine",
@@ -1055,6 +1243,30 @@
         "label": "URI Dialing Display Preference"
       },
       {
+        "id": "PrefixApplyTo",
+        "label": "Incoming Calling Party Number Prefix - Apply To"
+      },
+      {
+        "id": "NationalPrefix",
+        "label": "Incoming Calling Party National Number Prefix - Phone"
+      },
+      {
+        "id": "InternationalPrefix",
+        "label": "Incoming Calling Party International Number Prefix - Phone"
+      },
+      {
+        "id": "SubscriberPrefix",
+        "label": "Incoming Calling Party Subscriber Number Prefix - Phone"
+      },
+      {
+        "id": "UnknownPrefix",
+        "label": "Incoming Calling Party Unknown Number Prefix - Phone"
+      },
+      {
+        "id": "ApplyIncomingPrefixToCDRs",
+        "label": "Add Incoming Number Prefix to CDR"
+      },
+      {
         "id": "InsertHyphensIn12DigitNumbers",
         "label": "Insert Hyphens in 12-Digit Numbers"
       },
@@ -1071,6 +1283,34 @@
         "label": "Display External Presentation Name and Number"
       },
       {
+        "id": "PauseInSpeedDialInterDigitInterval_msec",
+        "label": "Pause In Speed Dial InterDigit Interval"
+      },
+      {
+        "id": "DisplayHuntPilotNameOrDNWhenAlerting",
+        "label": "Display Hunt Pilot Name or DN for Hunt Group Calls When Alerting"
+      },
+      {
+        "id": "ApplyTransformationsOnRemoteNumber",
+        "label": "Apply Transformations On Remote Number"
+      },
+      {
+        "id": "Asn1RoseEncoding",
+        "label": "ASN.1 ROSE OID Encoding"
+      },
+      {
+        "id": "QsigVariant",
+        "label": "QSIG Variant"
+      },
+      {
+        "id": "CallerID",
+        "label": "Caller ID"
+      },
+      {
+        "id": "CallingNameNotAvailableTimeout",
+        "label": "Calling Name Not Available Timeout"
+      },
+      {
         "id": "CgpnScreeningIndicator",
         "label": "Calling Party Number Screening Indicator"
       },
@@ -1079,8 +1319,36 @@
         "label": "Enable Outbound NetworkTrunk CallingParty Restriction"
       },
       {
+        "id": "ChangeBChannelMaintenanceStatus1",
+        "label": "Change B-Channel Maintenance Status 1"
+      },
+      {
+        "id": "ChangeBChannelMaintenanceStatus2",
+        "label": "Change B-Channel Maintenance Status 2"
+      },
+      {
+        "id": "ChangeBChannelMaintenanceStatus3",
+        "label": "Change B-Channel Maintenance Status 3"
+      },
+      {
+        "id": "ChangeBChannelMaintenanceStatus4",
+        "label": "Change B-Channel Maintenance Status 4"
+      },
+      {
+        "id": "ChangeBChannelMaintenanceStatus5",
+        "label": "Change B-Channel Maintenance Status 5"
+      },
+      {
+        "id": "ClearCallsDueToIncompatibleCallState",
+        "label": "Clear Calls Due to Incompatible Call State"
+      },
+      {
         "id": "ClearCallsWhenDatalinkGoesDown",
         "label": "Clear Calls Flag When Datalink Is Down"
+      },
+      {
+        "id": "DbMGCPDeviceTimeout",
+        "label": "Database MGCP Device Request Timer"
       },
       {
         "id": "DeviceStatusPollInterval_msec",
@@ -1143,8 +1411,16 @@
         "label": "MGCP Timer"
       },
       {
+        "id": "MGCPRetryTimeoutHandling",
+        "label": "MGCP Retry Timeout Handling"
+      },
+      {
         "id": "NumberingPlanInfo",
         "label": "Numbering Plan Info"
+      },
+      {
+        "id": "OptimizeMediaConnectionTime",
+        "label": "Optimize MediaConnection Time on Outbound Redirected Calls"
       },
       {
         "id": "OverlapReceivingForPriFlag",
@@ -1157,6 +1433,10 @@
       {
         "id": "PortReleaseTimer",
         "label": "Port Release Timer"
+      },
+      {
+        "id": "PRI4ESSUUIEDeviceType",
+        "label": "PRI 4ESS UUIE Device Type"
       },
       {
         "id": "SMDICallDelayTimer",
@@ -1183,6 +1463,10 @@
         "label": "I-Frame Timer"
       },
       {
+        "id": "ConvertProgressToDisconnect",
+        "label": "Convert Progress to Disconnect for User Side PRI EURO"
+      },
+      {
         "id": "UserUserIEStatus",
         "label": "User-to-User IE Status"
       },
@@ -1199,12 +1483,40 @@
         "label": "Audit OOS Channels Interval"
       },
       {
+        "id": "EnableDigitResetDuringHookFlash",
+        "label": "Use * Key to Erase Dialed Digits During Hookflash Transfer"
+      },
+      {
+        "id": "IncomingCallingPartyNationalNumberPrefixMGCP",
+        "label": "Incoming Calling Party National Number Prefix - MGCP"
+      },
+      {
+        "id": "IncomingCallingPartyInternationalNumberPrefixMGCP",
+        "label": "Incoming Calling Party International Number Prefix - MGCP"
+      },
+      {
+        "id": "IncomingCallingPartySubscriberNumberPrefixMGCP",
+        "label": "Incoming Calling Party Subscriber Number Prefix - MGCP"
+      },
+      {
+        "id": "IncomingCallingPartyUnknownNumberPrefixMGCP",
+        "label": "Incoming Calling Party Unknown Number Prefix - MGCP"
+      },
+      {
         "id": "DigitalAndAnalogPortsEnabled",
         "label": "Digital and Analog Ports Enabled"
       },
       {
+        "id": "AllowLayer1InfoForPriBearerCapability",
+        "label": "Allow Layer 1 info for Pri Bearer Capability for V110 calls"
+      },
+      {
         "id": "AcceptBlindTCPConnection",
         "label": "Accept Unknown TCP Connection"
+      },
+      {
+        "id": "AllowTCPKeepAlivesForH323",
+        "label": "Allow TCP KeepAlives For H323"
       },
       {
         "id": "BRQEnabled",
@@ -1215,8 +1527,24 @@
         "label": "Call Present Disconnect Flag"
       },
       {
+        "id": "EnableH323QuietClear",
+        "label": "Allow Peer to Preserve H.323 Calls"
+      },
+      {
+        "id": "BlockConnectedNumberIE",
+        "label": "Block Connected Number IE"
+      },
+      {
+        "id": "ProcessInboundH245AddressInH225Setup",
+        "label": "Process Inbound H.245 Address in H225Setup"
+      },
+      {
         "id": "CheckProgressIndicatorBeforeEstablishingMedia",
         "label": "Check Progress Indicator Before Establishing Media"
+      },
+      {
+        "id": "ConvertProgressToReleaseComplete",
+        "label": "Convert Progress To ReleaseComplete for H.323 Gateway Calls"
       },
       {
         "id": "H225BlockSetupDestination",
@@ -1367,6 +1695,38 @@
         "label": "Overlap Receiving Flag for H323"
       },
       {
+        "id": "IncomingCallingPartyNationalNumberPrefixH323",
+        "label": "Incoming Calling Party National Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCallingPartyInternationalNumberPrefixH323",
+        "label": "Incoming Calling Party International Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCallingPartySubscriberNumberPrefixH323",
+        "label": "Incoming Calling Party Subscriber Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCallingPartyUnknownNumberPrefixH323",
+        "label": "Incoming Calling Party Unknown Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCalledPartyNationalNumPrefixH323",
+        "label": "Incoming Called Party National Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCalledPartyInternationalNumPrefixH323",
+        "label": "Incoming Called Party International Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCalledPartySubscriberNumPrefixH323",
+        "label": "Incoming Called Party Subscriber Number Prefix - H.323"
+      },
+      {
+        "id": "IncomingCalledPartyUnknownNumPrefixH323",
+        "label": "Incoming Called Party Unknown Number Prefix - H.323"
+      },
+      {
         "id": "AllocateTranscoderForH323ToEOCall",
         "label": "Allocate Transcoder for H.323 on Early Offer SIP Trunk for Calls with Early Media"
       },
@@ -1483,6 +1843,14 @@
         "label": "SIP V.150 Outbound SDP Offer Filtering"
       },
       {
+        "id": "SIPMaxIncomingMessageSize",
+        "label": "SIP Max Incoming Message Size"
+      },
+      {
+        "id": "SIPMaxIncomingMessageHeaders",
+        "label": "SIP Max Incoming Message Headers"
+      },
+      {
         "id": "SendSIPMulticastTTLinSDP",
         "label": "Send SIP Multicast TTL in SDP"
       },
@@ -1497,6 +1865,10 @@
       {
         "id": "SIPPublishTrunk",
         "label": "IM and Presence Publish Trunk"
+      },
+      {
+        "id": "IncomingCallingPartyUnknownNumberPrefixSIP",
+        "label": "Incoming Calling Party Unknown Number Prefix - SIP"
       },
       {
         "id": "Send181ResponseForCallForward",
@@ -1529,6 +1901,14 @@
       {
         "id": "CallerIDDisplayPriorityEnabled",
         "label": "Caller ID Display Priority Enabled"
+      },
+      {
+        "id": "UseAllCallParkNumbersOnceBeforeReusing",
+        "label": "Use All Call Park Numbers Once Before Reusing"
+      },
+      {
+        "id": "EnableClusterwideCallPark",
+        "label": "Enable Clusterwide CallPark Number/Ranges"
       },
       {
         "id": "CallParkReversionTimeout",
@@ -1631,6 +2011,10 @@
         "label": "Advanced Ad Hoc Conference Enabled"
       },
       {
+        "id": "NonLinearAdhocConferenceLinkingEnabled",
+        "label": "Non-linear Ad Hoc Conference Linking Enabled"
+      },
+      {
         "id": "ChooseEncryptedInsteadOfVideo",
         "label": "Choose Encrypted Audio Conference Instead Of Video Conference"
       },
@@ -1639,12 +2023,20 @@
         "label": "Minimum Video Capable Participants To Allocate Video Conference"
       },
       {
+        "id": "AllocateVideoWhenVideoBridgeHasHigherPriority",
+        "label": "Allocate Video Conference Bridge For Audio Only Conferences When The Video Conference Bridge Has Higher Priority"
+      },
+      {
         "id": "EnableClickToConferenceForThirdPartyApps",
         "label": "Enable Click-to-Conference for Third-Party Applications"
       },
       {
         "id": "IMSConferenceFactoryURI",
         "label": "IMS Conference Factory URI"
+      },
+      {
+        "id": "MCUConferenceBridgeCustomLayoutIndex",
+        "label": "MCU Conference Bridge Custom Layout Index"
       },
       {
         "id": "ClusterConferencingPrefixId",
@@ -1683,12 +2075,28 @@
         "label": "Transform Forward by Reroute Destination"
       },
       {
+        "id": "VMBToDivertingNrEnabledFlag",
+        "label": "Include Voice Mailbox Address in QSIG Call Diversion APDUs"
+      },
+      {
+        "id": "CopyQsigDivertingNrToRedirNrFlag",
+        "label": "Copy QSIG DivertingNr to Redirecting Number"
+      },
+      {
+        "id": "CopyQsigDivReasonToOrigDivReasonFlag",
+        "label": "Copy QSIG DiversionReason to OriginalDiversionReason"
+      },
+      {
         "id": "AlwaysForwardSwitchVMCallsFlag",
         "label": "Always Forward Switch Voice Mail Calls"
       },
       {
         "id": "ForwardByRerouteT1Timer",
         "label": "Forward By Reroute T1 Timer"
+      },
+      {
+        "id": "QsigOrigVMBoxTranslation",
+        "label": "Transform Inbound QSIG originalCalledNr"
       },
       {
         "id": "IncludeOrigCalledInfoQSIGCallDiv",
@@ -1847,6 +2255,18 @@
         "label": "Set Type of Number for Call Back"
       },
       {
+        "id": "CBBRetResultOperationValue",
+        "label": "Return Result Operation Value"
+      },
+      {
+        "id": "CBBRetResultOptionalParam",
+        "label": "Return Result no-path-reservation and retain-service Value"
+      },
+      {
+        "id": "CBClearMonitoringCall",
+        "label": "Allow Originating PINX to Stop Monitoring After Call Back"
+      },
+      {
         "id": "PlayRecordingToneToObservedTarget",
         "label": "Play Recording Notification Tone To Observed Target"
       },
@@ -1881,6 +2301,10 @@
       {
         "id": "PlaySecureIndicationTone",
         "label": "Play Tone to Indicate Secure/Non-Secure Call Status"
+      },
+      {
+        "id": "MGCPGWPlayToneDelayTimer",
+        "label": "MGCP Gateway Play Tone Delay Timer"
       },
       {
         "id": "ExternalCallControlDiversionMaximumHopCount",
@@ -1923,12 +2347,32 @@
         "label": "Stop Routing on User Busy Flag"
       },
       {
+        "id": "StopRoutingOnQ931DisconnectCauseValues",
+        "label": "Stop Routing on Q.931 Disconnect Cause Code"
+      },
+      {
         "id": "RouteClassTrunkSignalingEnabled",
         "label": "Route Class Trunk Signaling Enabled"
       },
       {
         "id": "SIPRouteClassNamingAuthority",
         "label": "SIP Route Class Naming Authority"
+      },
+      {
+        "id": "SIPClearChannelDataRouteClassLabel",
+        "label": "SIP Clear Channel Data Route Class Label"
+      },
+      {
+        "id": "SIPSatelliteAvoidanceRouteClassLabel",
+        "label": "SIP Satellite Avoidance Route Class Label"
+      },
+      {
+        "id": "SIPHotlineVoiceRouteClassLabel",
+        "label": "SIP Hotline Voice Route Class Label"
+      },
+      {
+        "id": "SIPHotlineDataRouteClassLabel",
+        "label": "SIP Hotline Data Route Class Label"
       },
       {
         "id": "StopRoutingOnOutOfBandwidthFlagForHuntList",
@@ -2015,6 +2459,14 @@
         "label": "Restart Cisco CallManager on Initialization Exception"
       },
       {
+        "id": "DialingForestDumpEnabled",
+        "label": "Dialing Forest Dump Enabled"
+      },
+      {
+        "id": "SCCPBatchLatencyTimer",
+        "label": "Bundle Outbound SCCP Messages Timer"
+      },
+      {
         "id": "DigitAnalysisTimer",
         "label": "Digit Analysis Timer"
       },
@@ -2025,6 +2477,14 @@
       {
         "id": "RealTimeMonitoringToolDisplayPreference",
         "label": "Real-Time Monitoring Tool Display Preference for Calls"
+      },
+      {
+        "id": "DevicePropagationQueueDepth",
+        "label": "Device Registration/Unregistration Propagation Queue Depth"
+      },
+      {
+        "id": "SMEventsDebugEnabled",
+        "label": "Subscription Manager Events Debug Enabled"
       },
       {
         "id": "CcmPriorityClass",
@@ -2533,11 +2993,11 @@
     ]
   },
   {
-    "service": "Cisco CallManager SNMP Service (Active)",
+    "service": "Cisco CallManager SNMP Service (Inactive)",
     "parameters": []
   },
   {
-    "service": "Cisco Certificate Authority Proxy Function (Active)",
+    "service": "Cisco Certificate Authority Proxy Function (Inactive)",
     "parameters": [
       {
         "id": "CAPFCertGenMethod",
@@ -2578,6 +3038,10 @@
       {
         "id": "OnlineCAPassword",
         "label": "Online CA Password"
+      },
+      {
+        "id": "CertificateEnrollmentProfileLabel",
+        "label": "Certificate Enrollment Profile Label"
       }
     ]
   },
@@ -2592,6 +3056,10 @@
   {
     "service": "Cisco Database Layer Monitor (Active)",
     "parameters": [
+      {
+        "id": "DeviceNameValidationEnabled",
+        "label": "Device Name Validation"
+      },
       {
         "id": "CDRPurgeTime",
         "label": "Maintenance Time"
@@ -2609,8 +3077,52 @@
         "label": "Locale Specific Sorting"
       },
       {
+        "id": "AxlChangeNotification",
+        "label": "AXL Change Notification"
+      },
+      {
+        "id": "AxlChangeNotificationQueueSize",
+        "label": "AXL Change Notification Queue Size"
+      },
+      {
+        "id": "ValidNamespace",
+        "label": "Send Valid Namespace in AXL Response"
+      },
+      {
+        "id": "SPLTrace",
+        "label": "Database Trigger and Stored Procedure Trace Level"
+      },
+      {
+        "id": "SPLAppTraceLevel",
+        "label": "Database Trigger and Stored Procedure Application Trace Level"
+      },
+      {
         "id": "MaintenanceTaskTrace",
         "label": "MaintenanceTaskTrace"
+      },
+      {
+        "id": "EnableAXLEncodingInfo",
+        "label": "Include Encoding Information in AXL Response"
+      },
+      {
+        "id": "CheckForNamespaceInTag",
+        "label": "Check for namespace attributes in AXL requests"
+      },
+      {
+        "id": "ValidateServiceURL",
+        "label": "Validate Service URL"
+      },
+      {
+        "id": "ReplicationMonitorTimeout",
+        "label": "ReplicationMonitorTimeout"
+      },
+      {
+        "id": "MaximumInactivePeriod",
+        "label": "Disable User Accounts unused for (days)"
+      },
+      {
+        "id": "DisableUser",
+        "label": "Disable Unused User Accounts of the type"
       }
     ]
   },
@@ -2624,7 +3136,7 @@
     ]
   },
   {
-    "service": "Cisco DirSync (Active)",
+    "service": "Cisco DirSync (Inactive)",
     "parameters": [
       {
         "id": "MaxNumberOfAgreements",
@@ -2653,7 +3165,7 @@
     ]
   },
   {
-    "service": "Cisco Directory Number Alias Lookup (Active)",
+    "service": "Cisco Directory Number Alias Lookup (Inactive)",
     "parameters": [
       {
         "id": "TimeOutThresholdIntervalLookup",
@@ -2678,11 +3190,19 @@
       {
         "id": "ThresholdForErrorsLookup",
         "label": "Maximum LDAP Error Threshold"
+      },
+      {
+        "id": "TimeoutForLDAPContextLookup",
+        "label": "TimeOut for LDAP Connection in Minutes"
+      },
+      {
+        "id": "MaxRecordsPerContextLookup",
+        "label": "Maximum Operations Per LDAP Connection"
       }
     ]
   },
   {
-    "service": "Cisco Directory Number Alias Sync (Active)",
+    "service": "Cisco Directory Number Alias Sync (Inactive)",
     "parameters": [
       {
         "id": "ProcessuserThreadSleepInterval",
@@ -2723,11 +3243,19 @@
       {
         "id": "PUTFailCount",
         "label": "Maximum Retries Per Failed LDAP Operation"
+      },
+      {
+        "id": "TimeoutForLDAPContextSync",
+        "label": "TimeOut for LDAP Connection in Minutes"
+      },
+      {
+        "id": "MaxRecordsPerContextSync",
+        "label": "Maximum Operations Per LDAP Connection"
       }
     ]
   },
   {
-    "service": "Cisco Extended Functions (Active)",
+    "service": "Cisco Extended Functions (Inactive)",
     "parameters": [
       {
         "id": "QRTSecurityInstanceID",
@@ -2748,6 +3276,10 @@
       {
         "id": "AppSyncReqTimeOut",
         "label": "Synchronous Request Timeout"
+      },
+      {
+        "id": "CBBChangeNotifyPort",
+        "label": "CBB Change Notification TCP Port"
       },
       {
         "id": "ExtendedFeedback",
@@ -2791,6 +3323,10 @@
         "label": "Inter-cluster Maximum Login Time"
       },
       {
+        "id": "maxConcurrentSessions",
+        "label": "Maximum Concurrent Requests"
+      },
+      {
         "id": "multiDevHoteling",
         "label": "Multiple Login Behavior"
       },
@@ -2821,15 +3357,35 @@
       {
         "id": "headsetBasedAutoLoginTimer",
         "label": "Auto login timer after headset connect (seconds)"
+      },
+      {
+        "id": "validateIPForLogout",
+        "label": "Validate IP Address"
+      },
+      {
+        "id": "trustedIPList",
+        "label": "Trusted List of IPs"
+      },
+      {
+        "id": "allowProxy",
+        "label": "Allow Proxy"
+      },
+      {
+        "id": "EmccAllowProxy",
+        "label": "EMCC Allow Proxy"
+      },
+      {
+        "id": "emDevCacheSize",
+        "label": "Extension Mobility Cache Size"
       }
     ]
   },
   {
-    "service": "Cisco Headset Service (Active)",
+    "service": "Cisco Headset Service (Inactive)",
     "parameters": []
   },
   {
-    "service": "Cisco IP Manager Assistant (Active)",
+    "service": "Cisco IP Manager Assistant (Inactive)",
     "parameters": [
       {
         "id": "primaryCTIManagerAddress",
@@ -2888,6 +3444,26 @@
         "label": "Redirect call to Manager upon failure to reach Assistant"
       },
       {
+        "id": "multipleInstancesIPMA",
+        "label": "Enable Multiple Active Mode"
+      },
+      {
+        "id": "poolBIPMAPrimaryServer",
+        "label": "Pool 2: Cisco IPMA Server (Primary) IP Address"
+      },
+      {
+        "id": "poolBIPMABackupServer",
+        "label": "Pool 2: Cisco IPMA Server (Backup) IP Address"
+      },
+      {
+        "id": "poolCIPMAPrimaryServer",
+        "label": "Pool 3: Cisco IPMA Server (Primary) IP Address"
+      },
+      {
+        "id": "poolCIPMABackupServer",
+        "label": "Pool 3: Cisco IPMA Server (Backup) IP Address"
+      },
+      {
         "id": "softkeyAssistant",
         "label": "Assistant Softkey Template"
       },
@@ -2942,7 +3518,7 @@
     ]
   },
   {
-    "service": "Cisco IP Voice Media Streaming App (Active)",
+    "service": "Cisco IP Voice Media Streaming App (Inactive)",
     "parameters": [
       {
         "id": "ANN_CallCount",
@@ -2997,8 +3573,24 @@
         "label": "MOH Fixed Audio Quality level"
       },
       {
+        "id": "DefaultMOHDBLevel",
+        "label": "Default MOH Volume Level"
+      },
+      {
         "id": "IpTosMediaResource2Cm",
         "label": "IP DSCP to Cisco Unified Communications Manager"
+      },
+      {
+        "id": "McastMOH_G711PktSize",
+        "label": "Multicast MOH G.711 packet size"
+      },
+      {
+        "id": "McastMOH_G729PktSize",
+        "label": "Multicast MOH G.729 packet size"
+      },
+      {
+        "id": "McastMOH_WBPktSize",
+        "label": "Multicast MOH Wideband packet size"
       },
       {
         "id": "MulticastMOH_DSCP",
@@ -3015,11 +3607,23 @@
       {
         "id": "MOHPortAssignmentBasedOnAudioSource",
         "label": "Assign MOH stream port number based on Audio Source ID"
+      },
+      {
+        "id": "ForceANNtobeNonSecure",
+        "label": "Make Annunciator Non-secure when Cluster Security is Mixed"
+      },
+      {
+        "id": "ForceIVRtobeNonSecure",
+        "label": "Make IVR Non-secure when Cluster Security is Mixed"
+      },
+      {
+        "id": "ForceMOHtobeNonSecure",
+        "label": "Make MOH Non-secure when Cluster Security is Mixed"
       }
     ]
   },
   {
-    "service": "Cisco Intercluster Lookup Service (Active)",
+    "service": "Cisco Intercluster Lookup Service (Inactive)",
     "parameters": [
       {
         "id": "IlsListeningPort",
@@ -3064,7 +3668,7 @@
     ]
   },
   {
-    "service": "Cisco Location Bandwidth Manager (Active)",
+    "service": "Cisco Location Bandwidth Manager (Inactive)",
     "parameters": [
       {
         "id": "CallTreatmentWhenNoPathIsAvailable",
@@ -3073,6 +3677,10 @@
       {
         "id": "DSCPForLBMLinks",
         "label": "DSCP for LBM Protocol Links"
+      },
+      {
+        "id": "OptimizedReservationRefreshMechanismEnabled",
+        "label": "Optimized Reservation Refresh Mechanism Enabled"
       },
       {
         "id": "SdlTraceDataFlags",
@@ -3187,7 +3795,7 @@
     ]
   },
   {
-    "service": "Cisco TAPS Service (Active)",
+    "service": "Cisco TAPS Service (Inactive)",
     "parameters": [
       {
         "id": "ConfigureTAPS",
@@ -3198,6 +3806,22 @@
   {
     "service": "Cisco Tftp (Active)",
     "parameters": [
+      {
+        "id": "MaximumServingThreadCount",
+        "label": "Maximum Serving Count"
+      },
+      {
+        "id": "BuildCNFType",
+        "label": "Build CNF Files"
+      },
+      {
+        "id": "ExitOnException",
+        "label": "Exit When Exception is Caught"
+      },
+      {
+        "id": "AuditRemoteFiles",
+        "label": "Cleanup files fetched from remote clusters"
+      },
       {
         "id": "SdlTraceDataFlags",
         "label": "SDL Trace Data Flags"
@@ -3283,7 +3907,7 @@
     ]
   },
   {
-    "service": "Cisco Wireless Controller Synchronization Service (Active)",
+    "service": "Cisco Wireless Controller Synchronization Service (Inactive)",
     "parameters": [
       {
         "id": "SNMPRequestTimeout",

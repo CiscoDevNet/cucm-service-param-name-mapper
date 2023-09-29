@@ -128,7 +128,7 @@ print("Done")
 # Parse service parameters/labels from the admin pages
 def parse_params(service_index, service_name):
     service_param_map = {"service": service_name, "parameters": []}
-    url = f"https://{cucm_hostname}/ccmadmin/serviceParamEdit.do?server={cucm_process_node_uuid}&service={service_index}"
+    url = f"https://{cucm_hostname}/ccmadmin/serviceParamEdit.do?server={cucm_process_node_uuid}&service={service_index}&showall=true"
     response = session.request(
         "POST", url=url, headers=headers, data=payload, verify=False
     )
