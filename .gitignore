@@ -1,4 +1,5 @@
 .env
 venv/
-output.json
 .vscode/
+output.json
+output.md
