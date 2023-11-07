@@ -1,6 +1,6 @@
 # Service Parameter Label to ID Mapping
 
-**Hostname:** cucm14
+**Hostname:** SJDS-CUCM14
 
 **AXL Version:** 14.0
 
@@ -78,7 +78,7 @@
 |                                                              | TLSCipherPreference                                | TLS Ciphers                                                                       |
 |                                                              | SRTPCipherSelection                                | SRTP Ciphers                                                                      |
 |                                                              | HTTPSCipherSelection                               | HTTPS Ciphers                                                                     |
-|                                                              | TrustedServers                                     | Trusted List of Hosts in HTTP Referer/Host Header                                 |
+|                                                              | TrustedServers                                     | Trusted List of Hosts in HTTP referer header                                      |
 |                                                              | TerminateUserSession                               | Terminate User Sessions on Privilege or Credential Change                         |
 |                                                              | ResetPhonesOnCertChange                            | Phone Interaction on Certificate Update                                           |
 |                                                              | CertificateValidityCheck                           | Certificate Validity Check                                                        |
@@ -153,7 +153,7 @@
 |                                                              | neverStartCallWithVideo                            | Never Start Call with Video                                                       |
 |                                                              | DSCPValue                                          | DSCP for LDAP (all services using Directory Number Alias port)                    |
 |                                                              | oauthTokenExpiryTimer                              | OAuth Access Token Expiry Timer (minutes)                                         |
-|                                                              | refreshTokenExpiryTimer                            | Client OAuth Refresh Token Expiry Timer (days)                                    |
+|                                                              | refreshTokenExpiryTimer                            | Jabber OAuth Refresh Token Expiry Timer (days)                                    |
 |                                                              | DeviceTokenExpiryTimer                             | Physical Phone OAuth Refresh Token Expiry Timer (days)                            |
 |                                                              | thirdpartyclient_redirecturi                       | Redirect URIs for Third Party SSO Client                                          |
 |                                                              | SSOLoginBehaviorForIos                             | SSO Login Behavior for iOS                                                        |
@@ -211,7 +211,7 @@
 |                                                              | DSCPForCTI2Apps                                    | DSCP IP CTIManager to Application                                                 |
 |                                                              | SdlListeningPort                                   | SDL Listening Port                                                                |
 |                                                              | SdlMaxUnHandledExceptions                          | Suppress Debug Info for Router Death                                              |
-| Cisco CTL Provider (Inactive)                                |                                                    |                                                                                   |
+| Cisco CTL Provider (Active)                                  |                                                    |                                                                                   |
 | Cisco CallManager (Active)                                   |                                                    |                                                                                   |
 |                                                              | CodeYellowEntryLatency                             | Code Yellow Entry Latency                                                         |
 |                                                              | CodeYellowExitLatencyCalculation                   | Code Yellow Exit Latency Calculation                                              |
@@ -502,7 +502,6 @@
 |                                                              | UseRestrictionOfPresentationOfTransferringParty    | Use Restriction attribute of ID/Name Presentation of Transferring Party           |
 |                                                              | LocalRouteGroupForRedirectedCalls                  | Local route group for redirected calls                                            |
 |                                                              | BlockUnencryptedCalls                              | Block Unencrypted Calls                                                           |
-|                                                              | ApplyVoiceMailMask                                 | Voicemail Mask in Diversion Header                                                |
 |                                                              | SuppressMohToCB                                    | Suppress MOH to Conference Bridge                                                 |
 |                                                              | DropAdhocConference                                | Drop Ad Hoc Conference                                                            |
 |                                                              | MaxAdHocConference                                 | Maximum Ad Hoc Conference                                                         |
@@ -753,8 +752,8 @@
 |                                                              | DeductAudioBandwidthFromAudioPoolForVideoCall      | Deduct Audio Bandwidth Portion from Audio Pool for a Video Call                   |
 |                                                              | AlternateEmergencyDestination                      | Alternate Destination for Emergency Call                                          |
 |                                                              | AlternateEmergencyCSS                              | Alternate Calling Search Space for Emergency Call                                 |
-| Cisco CallManager SNMP Service (Inactive)                    |                                                    |                                                                                   |
-| Cisco Certificate Authority Proxy Function (Inactive)        |                                                    |                                                                                   |
+| Cisco CallManager SNMP Service (Active)                      |                                                    |                                                                                   |
+| Cisco Certificate Authority Proxy Function (Active)          |                                                    |                                                                                   |
 |                                                              | CAPFCertGenMethod                                  | Certificate Issuer to Endpoint                                                    |
 |                                                              | CAPFCertValidityDuration                           | Duration Of Certificate Validity (in days)                                        |
 |                                                              | CAPFKeyGenTimer                                    | Maximum Allowable Time For Key Generation                                         |
@@ -765,7 +764,6 @@
 |                                                              | OnlineCAType                                       | Online CA Type                                                                    |
 |                                                              | OnlineCAUsername                                   | Online CA Username                                                                |
 |                                                              | OnlineCAPassword                                   | Online CA Password                                                                |
-|                                                              | CertificateEnrollmentProfileLabel                  | Certificate Enrollment Profile Label                                              |
 | Cisco DRF Local (Active)                                     |                                                    |                                                                                   |
 | Cisco DRF Master (Active)                                    |                                                    |                                                                                   |
 | Cisco Database Layer Monitor (Active)                        |                                                    |                                                                                   |
@@ -788,14 +786,14 @@
 |                                                              | DisableUser                                        | Disable Unused User Accounts of the type                                          |
 | Cisco Device Activation Service (Active)                     |                                                    |                                                                                   |
 |                                                              | ActivationCodeExpiry                               | Activation Code Time To Live (hours)                                              |
-| Cisco DirSync (Inactive)                                     |                                                    |                                                                                   |
+| Cisco DirSync (Active)                                       |                                                    |                                                                                   |
 |                                                              | MaxNumberOfAgreements                              | Maximum Number Of Agreements                                                      |
 |                                                              | MaxNumberOfHost                                    | Maximum Number Of Hosts                                                           |
 |                                                              | RetryDelayOnFailureHost                            | Retry Delay On Host Failure (secs)                                                |
 |                                                              | RetryDelayOnFailureHostList                        | Retry Delay On HostList Failure (mins)                                            |
 |                                                              | LDAPConnectionTimeout                              | LDAP Connection Timeout (secs)                                                    |
 |                                                              | DelayedSyncStart                                   | Delayed Sync Start time (mins)                                                    |
-| Cisco Directory Number Alias Lookup (Inactive)               |                                                    |                                                                                   |
+| Cisco Directory Number Alias Lookup (Active)                 |                                                    |                                                                                   |
 |                                                              | TimeOutThresholdIntervalLookup                     | Timeout for Initial LDAP Operation                                                |
 |                                                              | TimeOutThresholdIntervalForLDAPRetryLookup         | Timeout for Retried LDAP Operation                                                |
 |                                                              | AllowedLDAPRetryCountLookup                        | Number of LDAP Operation Retries Allowed                                          |
@@ -804,7 +802,7 @@
 |                                                              | ThresholdForErrorsLookup                           | Maximum LDAP Error Threshold                                                      |
 |                                                              | TimeoutForLDAPContextLookup                        | TimeOut for LDAP Connection in Minutes                                            |
 |                                                              | MaxRecordsPerContextLookup                         | Maximum Operations Per LDAP Connection                                            |
-| Cisco Directory Number Alias Sync (Inactive)                 |                                                    |                                                                                   |
+| Cisco Directory Number Alias Sync (Active)                   |                                                    |                                                                                   |
 |                                                              | ProcessuserThreadSleepInterval                     | Sync Frequency                                                                    |
 |                                                              | RecordSizeForUpdate                                | Block Size For Update                                                             |
 |                                                              | UpdateSleepInterval                                | Pause Interval Between Update Blocks                                              |
@@ -817,7 +815,7 @@
 |                                                              | PUTFailCount                                       | Maximum Retries Per Failed LDAP Operation                                         |
 |                                                              | TimeoutForLDAPContextSync                          | TimeOut for LDAP Connection in Minutes                                            |
 |                                                              | MaxRecordsPerContextSync                           | Maximum Operations Per LDAP Connection                                            |
-| Cisco Extended Functions (Inactive)                          |                                                    |                                                                                   |
+| Cisco Extended Functions (Active)                            |                                                    |                                                                                   |
 |                                                              | QRTSecurityInstanceID                              | CAPF Profile Instance Id for Secure Connection to CTI Manager                     |
 |                                                              | AppProviderOpenTimeOut                             | Provider Open Call Timeout                                                        |
 |                                                              | AppHearBeatInterval                                | Heartbeat Interval Timeout                                                        |
@@ -848,8 +846,8 @@
 |                                                              | allowProxy                                         | Allow Proxy                                                                       |
 |                                                              | EmccAllowProxy                                     | EMCC Allow Proxy                                                                  |
 |                                                              | emDevCacheSize                                     | Extension Mobility Cache Size                                                     |
-| Cisco Headset Service (Inactive)                             |                                                    |                                                                                   |
-| Cisco IP Manager Assistant (Inactive)                        |                                                    |                                                                                   |
+| Cisco Headset Service (Active)                               |                                                    |                                                                                   |
+| Cisco IP Manager Assistant (Active)                          |                                                    |                                                                                   |
 |                                                              | primaryCTIManagerAddress                           | CTIManager (Primary) IP Address                                                   |
 |                                                              | backupCTIManagerAddress                            | CTIManager (Backup) IP Address                                                    |
 |                                                              | routePointDeviceName                               | Route Point Device Name for Proxy Mode                                            |
@@ -882,7 +880,7 @@
 |                                                              | proxyRangeEnd                                      | Ending Directory Number                                                           |
 |                                                              | trimManagerLine                                    | Number of Characters to be Stripped from Manager DN                               |
 |                                                              | proxyPrefix                                        | Prefix for Manager DN                                                             |
-| Cisco IP Voice Media Streaming App (Inactive)                |                                                    |                                                                                   |
+| Cisco IP Voice Media Streaming App (Active)                  |                                                    |                                                                                   |
 |                                                              | ANN_CallCount                                      | Call Count                                                                        |
 |                                                              | ANN_RunFlag                                        | Run Flag                                                                          |
 |                                                              | IVR_CallCount                                      | Call Count                                                                        |
@@ -908,7 +906,7 @@
 |                                                              | ForceANNtobeNonSecure                              | Make Annunciator Non-secure when Cluster Security is Mixed                        |
 |                                                              | ForceIVRtobeNonSecure                              | Make IVR Non-secure when Cluster Security is Mixed                                |
 |                                                              | ForceMOHtobeNonSecure                              | Make MOH Non-secure when Cluster Security is Mixed                                |
-| Cisco Intercluster Lookup Service (Inactive)                 |                                                    |                                                                                   |
+| Cisco Intercluster Lookup Service (Active)                   |                                                    |                                                                                   |
 |                                                              | IlsListeningPort                                   | Listening Port for Certificate Based Authentication (TLS)                         |
 |                                                              | IlsNonTLSListeningPort                             | Listening Port for Password Based Authentication (non-TLS)                        |
 |                                                              | IlsSyncThrottle                                    | ILS Sync Throttle                                                                 |
@@ -919,7 +917,7 @@
 |                                                              | SdlTraceDataSize                                   | SDL Trace Data Size                                                               |
 |                                                              | SdlTraceFlag                                       | SDL Trace Flag                                                                    |
 |                                                              | SdlTraceTypeFlags                                  | SDL TraceType Flags                                                               |
-| Cisco Location Bandwidth Manager (Inactive)                  |                                                    |                                                                                   |
+| Cisco Location Bandwidth Manager (Active)                    |                                                    |                                                                                   |
 |                                                              | CallTreatmentWhenNoPathIsAvailable                 | Call Treatment When No Path is Available                                          |
 |                                                              | DSCPForLBMLinks                                    | DSCP for LBM Protocol Links                                                       |
 |                                                              | OptimizedReservationRefreshMechanismEnabled        | Optimized Reservation Refresh Mechanism Enabled                                   |
@@ -950,7 +948,7 @@
 |                                                              | RTMTReporterNode                                   | RTMT Reporter Designated Node                                                     |
 |                                                              | RTMTReportGenerationTime                           | RTMT Report Generation Time                                                       |
 |                                                              | RTMTReportDeletionAge                              | RTMT Report Deletion Age                                                          |
-| Cisco TAPS Service (Inactive)                                |                                                    |                                                                                   |
+| Cisco TAPS Service (Active)                                  |                                                    |                                                                                   |
 |                                                              | ConfigureTAPS                                      | Auto-Registration Options for TAPS                                                |
 | Cisco Tftp (Active)                                          |                                                    |                                                                                   |
 |                                                              | MaximumServingThreadCount                          | Maximum Serving Count                                                             |
@@ -977,7 +975,7 @@
 |                                                              | applyDialrulesSOAP                                 | Apply Application Dial Rules on SOAP Dial Request                                 |
 |                                                              | securityFlag                                       | CTI Manager Connection Security Flag                                              |
 |                                                              | makeCallProxyAPI                                   | MakeCallProxy HTTP Methods                                                        |
-| Cisco Wireless Controller Synchronization Service (Inactive) |                                                    |                                                                                   |
+| Cisco Wireless Controller Synchronization Service (Active)   |                                                    |                                                                                   |
 |                                                              | SNMPRequestTimeout                                 | SNMP Request Timeout(secs)                                                        |
 |                                                              | SNMPRequestRetries                                 | SNMP Request Retries                                                              |
 |                                                              | SNMPRequestQuerySize                               | SNMP Request Query Size                                                           |

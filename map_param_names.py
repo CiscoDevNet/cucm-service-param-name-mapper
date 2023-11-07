@@ -88,10 +88,21 @@ if re.search('.*uuid="{(.*)}".*', response.text) is None:
 cucm_process_node_uuid = re.search('.*uuid="{(.*)}".*', response.text).group(1).lower()
 print(cucm_process_node_uuid)
 
-# Submit the admin login form with credentials
-# Use requests.Session to retain the resulting login cookies for re-use
-print("Logging into the admin site: ", end="")
+# Use requests.Session to retain site session/login cookies for re-use
 session = requests.Session()
+
+# Retrieve the CCUCM admin home page to create a Tomcat session
+print("Retrieving the admin site home page: ", end="")
+response = session.request(
+    "POST",
+    url=f"https://{os.getenv('CUCM_HOSTNAME')}/ccmadmin/showHome.do",
+    verify=False,
+)
+print("Done")
+
+
+# Submit the admin login form with credentials
+print("Logging into the admin site: ", end="")
 payload = (
     f"appNav=ccmadmin&j_username={cucm_admin_user}&j_password={cucm_admin_password}"
 )

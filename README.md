@@ -45,7 +45,7 @@ DevNet sandboxes with CUCM instances are available for testing, e.g. **Collabora
 
 
   > **Notes:**
-    > * CUCM hostname is case sensitive - as appears in CUCM admin **List / Server**.
+    > * CUCM hostname is case sensitive - use exactly what appears in CUCM admin **List / Server**.
     > * The CUCM admin user must have AXL read permission.
 
   Be sure to save the file!
@@ -61,11 +61,3 @@ DevNet sandboxes with CUCM instances are available for testing, e.g. **Collabora
  ## Caveats
 
 * This sample is likely to work against any fairly recent CUCM version - however, as it is implemented via scraping of HTML pages, cosmetic changes to the admin UI service parameter pages (which could happen for any major/minor/SU/ES version) may break parsing.
-
-* Authentication to the CUCM admin pages is automated by simulating a browser-based login sequence - this can fail unexpectedly, e.g. if the script is run multiple times in quick succession or if the admin user is also logged into the site via an actual browser.
-
-  Logging out of the browser session, or just waiting several minutes for the login session to expire should workaround the issue.
-  
-  See the [Cisco Unified Communications Manager Administration Guide](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/admin/10_0_1/ccmcfg/CUCM_BK_C95ABA82_00_admin-guide-100/CUCM_BK_C95ABA82_00_admin-guide-100_chapter_01.html#CUCM_RF_W6916DC4_00):
-
-  ![Security Error](images/security_error.png)
